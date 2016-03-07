@@ -38,6 +38,9 @@ call unite#custom#source('grep', 'max_candidates', 0)
 set number
 set relativenumber
 set cursorline
+set lazyredraw
+set hidden
+set clipboard=unnamedplus
 set tabstop=2
 set shiftwidth=2
 set foldmethod=syntax
