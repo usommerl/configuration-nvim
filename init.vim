@@ -26,11 +26,9 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_session_enable_auto_save = 1
-let g:unite_source_find_default_expr = '-iname '
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
-call unite#custom#source('find', 'max_candidates', 0)
 call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
 " }}}
