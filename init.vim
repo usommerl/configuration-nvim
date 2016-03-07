@@ -86,7 +86,6 @@ vnoremap 					<leader>r<space> :s/\s\+$/<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
-nnoremap <silent> <leader>br       :<C-u>UniteResume buffer<cr>
 nnoremap <silent> <leader>ff       :FZF -m<cr>
 nnoremap <silent> <leader>fe       :FZF -e -m<cr>
 nnoremap          <leader>gd       :Gdiff<cr>
