@@ -73,12 +73,11 @@ set statusline+=[%p%%]                           " percentage
 
 
 " {{{ Keys
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-nnoremap <silent> <C-l> :<C-u>nohlsearch<cr><C-l>
-nnoremap <C-e> 4<C-e>
-nnoremap <C-y> 4<C-y>
-
 let mapleader = ","
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+nnoremap <silent> <C-l> 					 :<C-u>nohlsearch<cr><C-l>
+nnoremap 					<C-e>						 4<C-e>
+nnoremap 					<C-y>						 4<C-y>
 nnoremap 					<leader>. 			 :b#<cr>
 nnoremap 					<leader>l 			 :set list!<cr>
 nnoremap 					<leader>r<space> :%s/\s\+$/<cr>
