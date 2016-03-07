@@ -52,7 +52,6 @@ set tabstop=2
 set shiftwidth=2
 set foldmethod=syntax
 set foldlevelstart=99
-set hlsearch
 set listchars=tab:▸\ ,eol:$,nbsp:%
 colorscheme seoul256
 " {{{ Statusline
