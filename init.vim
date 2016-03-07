@@ -54,6 +54,7 @@ set tabstop=2
 set shiftwidth=2
 set foldmethod=syntax
 set hlsearch
+set listchars=tab:▸\ ,eol:$,nbsp:%
 colorscheme seoul256
 " {{{ Statusline
 set statusline=[%n]\                             " buffer number
