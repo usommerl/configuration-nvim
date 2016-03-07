@@ -14,6 +14,7 @@ Plug 'Shougo/unite-outline'
 Plug 'Shougo/unite-session'
 Plug 'scrooloose/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 " }}}
 
@@ -31,7 +32,15 @@ call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
 call unite#custom#source('find', 'max_candidates', 0)
 call unite#custom#source('grep', 'max_candidates', 0)
-" }}} Unite
+" }}}
+" }}}
+
+" {{{ Functions
+function! GitStatus()
+  let l:git_status=substitute(fugitive#statusline(), "Git(", "", "")
+  let l:git_status=substitute(l:git_status, ")", "", "")
+  return l:git_status
+endfunction
 " }}}
 
 " {{{ General Settings
@@ -46,6 +55,18 @@ set shiftwidth=2
 set foldmethod=syntax
 set hlsearch
 colorscheme seoul256
+" {{{ Statusline
+set statusline=[%n]\                             " buffer number
+set statusline+=%<                               " truncate from here if line is too long
+set statusline+=%F                               " filename
+set statusline+=\ %{GitStatus()}                 " git status
+set statusline+=%m%r%h%w\                        " flags
+set statusline+=%=                               " shove everything from here to the right
+set statusline+=[%{strlen(&fenc)?&fenc:&enc}]\   " encoding
+set statusline+=%{strlen(&ft)?'['.&ft.']\ ':''}  " filetype
+set statusline+=[%l,%v]\                         " position in file [line,column]
+set statusline+=[%p%%]                           " percentage
+" }}}
 " }}}
 
 
