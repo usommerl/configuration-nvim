@@ -49,7 +49,9 @@ set lazyredraw
 set hidden
 set clipboard=unnamedplus
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
+set expandtab
 set foldmethod=syntax
 set foldlevelstart=99
 set listchars=tab:▸\ ,eol:$,nbsp:%
