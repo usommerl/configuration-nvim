@@ -86,10 +86,15 @@ nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
 nnoremap <silent> <leader>ff       :Files<cr>
 nnoremap <silent> <leader>fe       :FZF -e -m<cr>
-nnoremap          <leader>gd       :Gdiff<cr>
-nnoremap          <leader>gb       :Gblame<cr>
-nnoremap          <leader>gvb      :Gitv<cr>
-nnoremap          <leader>gvf      :Gitv!<cr>
+nnoremap          <leader>Gd       :Gdiff<cr>
+nnoremap          <leader>Gst      :Gstatus<cr>
+nnoremap          <leader>Gc       :Gcommit -v<cr>
+nnoremap          <leader>Gb       :Gblame<cr>
+nnoremap          <leader>Ghr      :GitGutterRevertHunk<cr>
+nnoremap          <leader>Ghs      :GitGutterStageHunk<cr>
+nnoremap          <leader>Ghp      :GitGutterPreviewHunk<cr>
+nnoremap          <leader>Gvb      :Gitv<cr>
+nnoremap          <leader>Gvf      :Gitv!<cr>
 nnoremap <silent> <leader>ggg      :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
 nnoremap          <leader>ggo      :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>ggr      :<C-u>UniteResume grep<cr>
