@@ -84,17 +84,17 @@ vnoremap 					<leader>r<space> :s/\s\+$/<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
-nnoremap <silent> <leader>ff       :Files<cr>
-nnoremap <silent> <leader>fe       :FZF -e -m<cr>
-nnoremap          <leader>Gd       :Gdiff<cr>
-nnoremap          <leader>Gst      :Gstatus<cr>
-nnoremap          <leader>Gc       :Gcommit -v<cr>
-nnoremap          <leader>Gb       :Gblame<cr>
-nnoremap          <leader>Ghr      :GitGutterRevertHunk<cr>
-nnoremap          <leader>Ghs      :GitGutterStageHunk<cr>
-nnoremap          <leader>Ghp      :GitGutterPreviewHunk<cr>
-nnoremap          <leader>Gvb      :Gitv<cr>
-nnoremap          <leader>Gvf      :Gitv!<cr>
+nnoremap <silent> <leader>ff       :<C-u>Files<cr>
+nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
+nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
+nnoremap          <leader>Gst      :<C-u>Gstatus<cr>
+nnoremap          <leader>Gc       :<C-u>Gcommit -v<cr>
+nnoremap          <leader>Gb       :<C-u>Gblame<cr>
+nnoremap          <leader>Ghr      :<C-u>GitGutterRevertHunk<cr>
+nnoremap          <leader>Ghs      :<C-u>GitGutterStageHunk<cr>
+nnoremap          <leader>Ghp      :<C-u>GitGutterPreviewHunk<cr>
+nnoremap          <leader>Gvb      :<C-u>Gitv<cr>
+nnoremap          <leader>Gvf      :<C-u>Gitv!<cr>
 nnoremap <silent> <leader>gg       :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
