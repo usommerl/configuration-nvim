@@ -91,7 +91,7 @@ nnoremap          <leader>Gst      :<C-u>Gstatus<cr>
 nnoremap          <leader>Gc       :<C-u>Gcommit -v<cr>
 nnoremap          <leader>Gb       :<C-u>Gblame<cr>
 nnoremap          <leader>Ghr      :<C-u>GitGutterRevertHunk<cr>
-nnoremap          <leader>Ghs      :<C-u>GitGutterStageHunk<cr>
+nnoremap          <leader>Gha      :<C-u>GitGutterStageHunk<cr>
 nnoremap          <leader>Ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>Gvb      :<C-u>Gitv<cr>
 nnoremap          <leader>Gvf      :<C-u>Gitv!<cr>
