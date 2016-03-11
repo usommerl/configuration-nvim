@@ -85,6 +85,7 @@ nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical ou
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
+nnoremap <silent> <leader>fb       :<C-u>Buffers<cr>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>Gst      :<C-u>Gstatus<cr>
