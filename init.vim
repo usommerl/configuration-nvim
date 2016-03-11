@@ -101,7 +101,7 @@ nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
 nnoremap <silent> <leader>rr       :<C-u>Unite -buffer-name=register register<cr>
-nnoremap <silent> <leader>ss       :<C-u>Unite -buffer-name=sessions session<cr>
+nnoremap <silent> <leader>ss       :<C-u>Unite -buffer-name=sessions -start-insert session<cr>
 nnoremap <silent> <leader>sw       :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
 nnoremap <silent> <leader>sn       :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
 nnoremap <silent> <leader>sc       :<C-u>echo v:this_session<cr>
