@@ -75,13 +75,13 @@ set list
 " {{{ Keys
 let mapleader = ","
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-nnoremap <silent> <C-l> 					 :<C-u>nohlsearch<cr><C-l>
-nnoremap 					<C-e>						 4<C-e>
-nnoremap 					<C-y>						 4<C-y>
-nnoremap 					<leader>. 			 :b#<cr>
-nnoremap 					<leader>l 			 :set list!<cr>
-nnoremap 					<leader>r<space> :%s/\s\+$/<cr>
-vnoremap 					<leader>r<space> :s/\s\+$/<cr>
+nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
+nnoremap          <C-e>            4<C-e>
+nnoremap          <C-y>            4<C-y>
+nnoremap          <leader>.        :b#<cr>
+nnoremap          <leader>l        :set list!<cr>
+nnoremap          <leader>r<space> :%s/\s\+$/<cr>
+vnoremap          <leader>r<space> :s/\s\+$/<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
