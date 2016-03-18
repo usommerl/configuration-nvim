@@ -79,10 +79,6 @@ nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            4<C-e>
 nnoremap          <C-y>            4<C-y>
 nnoremap          <leader>.        :b#<cr>
-nnoremap          <leader>l        :set list!<cr>
-nnoremap          <leader>r<space> :%s/\s\+$/<cr>
-vnoremap          <leader>r<space> :s/\s\+$/<cr>
-nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
@@ -101,11 +97,17 @@ nnoremap <silent> <leader>gg       :<C-u>Unite -buffer-name=grep -no-empty grep<
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
+nnoremap          <leader>l        :set list!<cr>
+nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>rr       :<C-u>Unite -buffer-name=register register<cr>
+nnoremap          <leader>r<space> :<C-u>%s/\s\+$/<cr>
+vnoremap          <leader>r<space> :s/\s\+$/<cr>
 nnoremap <silent> <leader>ss       :<C-u>Unite -buffer-name=sessions -start-insert session<cr>
 nnoremap <silent> <leader>sw       :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
 nnoremap <silent> <leader>sn       :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
 nnoremap <silent> <leader>sc       :<C-u>echo v:this_session<cr>
+nnoremap          <leader>tn       :<C-u>tabnew<cr>
+nnoremap          <leader>tc       :<C-u>tabclose<cr>
 nnoremap <silent> <leader>yy       :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
