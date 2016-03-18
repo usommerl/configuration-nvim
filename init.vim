@@ -108,6 +108,7 @@ nnoremap <silent> <leader>sn       :<C-u>Unite -buffer-name=sessions -start-inse
 nnoremap <silent> <leader>sc       :<C-u>echo v:this_session<cr>
 nnoremap          <leader>tn       :<C-u>tabnew<cr>
 nnoremap          <leader>tc       :<C-u>tabclose<cr>
+nnoremap <silent> <leader>w        :<C-u>set wrap!<cr>
 nnoremap <silent> <leader>yy       :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
