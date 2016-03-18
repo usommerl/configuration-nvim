@@ -16,8 +16,6 @@ Plug 'Shougo/unite-session'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-fugitive'
 call plug#end()
-" }}}
-
 " {{{ Plugin Settings
 " {{{ Unite
 let g:unite_source_history_yank_enable = 1
@@ -32,6 +30,7 @@ call unite#custom#source('session', 'sorters', 'sorter_word')
 call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
 " }}}
+" }}}
 
 " {{{ Functions
 function! GitStatus()
@@ -41,7 +40,7 @@ function! GitStatus()
 endfunction
 " }}}
 
-" {{{ General Settings
+" {{{ Settings
 set number
 set relativenumber
 set cursorline
