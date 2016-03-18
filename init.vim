@@ -54,7 +54,7 @@ set shiftwidth=2
 set expandtab
 set foldmethod=syntax
 set foldlevelstart=99
-set listchars=tab:▸\ ,eol:$,nbsp:%
+set listchars=tab:▸\ ,trail:█,nbsp:%
 colorscheme seoul256
 " {{{ Statusline
 set statusline=[%n]\                             " buffer number
@@ -67,6 +67,7 @@ set statusline+=[%{strlen(&fenc)?&fenc:&enc}]\   " encoding
 set statusline+=%{strlen(&ft)?'['.&ft.']\ ':''}  " filetype
 set statusline+=[%l,%v]\                         " position in file [line,column]
 set statusline+=[%p%%]                           " percentage
+set list
 " }}}
 " }}}
 
