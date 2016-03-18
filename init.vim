@@ -71,7 +71,6 @@ set list
 " }}}
 " }}}
 
-
 " {{{ Keys
 let mapleader = ","
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
