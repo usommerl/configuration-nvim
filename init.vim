@@ -117,4 +117,5 @@ au! BufWritePost init.vim source ~/.config/nvim/init.vim | setlocal foldmethod=m
 au! Filetype scala,java,ruby,sh,vim let &l:colorcolumn=81
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent! loadview
+au! VimResized * :wincmd =
 " }}}
