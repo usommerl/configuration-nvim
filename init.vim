@@ -112,6 +112,10 @@ nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
 "}}}
 
+" {{{ Commands
+command! Sw w !sudo tee % > /dev/null
+" }}}
+
 " {{{ Autocommands
 au! BufWritePost init.vim source ~/.config/nvim/init.vim | setlocal foldmethod=marker
 au! Filetype scala,java,ruby,sh,vim let &l:colorcolumn=81
