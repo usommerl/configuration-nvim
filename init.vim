@@ -78,6 +78,8 @@ colorscheme seoul256
 " {{{ Keys
 let mapleader = ","
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+nnoremap                  +        <C-a>
+nnoremap                  -        <C-x>
 nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            4<C-e>
 nnoremap          <C-y>            4<C-y>
