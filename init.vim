@@ -56,14 +56,6 @@ endfunction
 " }}}
 " }}}
 
-" {{{ Functions
-function! GitStatus()
-  let l:git_status=substitute(fugitive#statusline(), "Git(", "", "")
-  let l:git_status=substitute(l:git_status, ")", "", "")
-  return l:git_status
-endfunction
-" }}}
-
 " {{{ Settings
 set number
 set relativenumber
