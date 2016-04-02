@@ -36,7 +36,7 @@ call unite#custom#source('grep', 'max_candidates', 0)
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ 'active': {
-      \   'left': [['absolutepath', 'modified'], ['fugitive']],
+      \   'left': [['mode', 'absolutepath', 'modified'], ['fugitive']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
       \ },
       \ 'inactive': {
