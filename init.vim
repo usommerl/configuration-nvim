@@ -8,6 +8,7 @@ Plug 'morhetz/gruvbox'
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/vim-cursorword'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -30,6 +31,28 @@ call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
 call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
+
+" {{{ Lightline
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ 'active': {
+      \   'left': [ [ 'mode' ],
+      \             [ 'readonly', 'fugitive', 'absolutepath', 'modified' ] ]
+      \ },
+      \ 'inactive': {
+      \   'left': [ [ ],
+      \             [ 'readonly', 'absolutepath', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'LightLineFugitive'
+      \ }
+      \ }
+
+function! LightLineFugitive()
+  return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
+" }}}
+
 " }}}
 " }}}
 
@@ -55,20 +78,9 @@ set expandtab
 set foldmethod=syntax
 set foldlevelstart=99
 set listchars=tab:▸\ ,trail:█,nbsp:%
-colorscheme seoul256
-" {{{ Statusline
-set statusline=[%n]\                             " buffer number
-set statusline+=%<                               " truncate from here if line is too long
-set statusline+=%F                               " filename
-set statusline+=\ %{GitStatus()}                 " git status
-set statusline+=%m%r%h%w\                        " flags
-set statusline+=%=                               " shove everything from here to the right
-set statusline+=[%{strlen(&fenc)?&fenc:&enc}]\   " encoding
-set statusline+=%{strlen(&ft)?'['.&ft.']\ ':''}  " filetype
-set statusline+=[%l,%v]\                         " position in file [line,column]
-set statusline+=[%p%%]                           " percentage
 set list
-" }}}
+set noshowmode
+colorscheme seoul256
 " }}}
 
 " {{{ Keys
@@ -118,7 +130,7 @@ command! Sw w !sudo tee % > /dev/null
 " }}}
 
 " {{{ Autocommands
-au! BufWritePost init.vim source ~/.config/nvim/init.vim | setlocal foldmethod=marker
+au! BufWritePost $MYVIMRC nested source $MYVIMRC | setlocal foldmethod=marker
 au! Filetype scala,java,ruby,sh,vim let &l:colorcolumn=81
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent! loadview
