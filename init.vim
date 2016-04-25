@@ -17,6 +17,8 @@ Plug 'Shougo/unite-outline'
 Plug 'Shougo/unite-session'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 " {{{ Plugin Settings
 " {{{ Unite
