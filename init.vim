@@ -58,6 +58,16 @@ endfunction
 " }}}
 " }}}
 
+" {{{ Functions
+function! DiffToggle()
+    if &diff
+        diffoff
+    else
+        diffthis
+    endif
+:endfunction
+" }}}
+
 " {{{ Settings
 set number
 set relativenumber
@@ -88,6 +98,7 @@ nnoremap          <C-y>            4<C-y>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
+nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
 nnoremap <silent> <leader>fb       :<C-u>Buffers<cr>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
