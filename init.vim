@@ -7,6 +7,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 " }}}
 Plug 'airblade/vim-gitgutter'
+Plug 'AndrewRadev/linediff.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
