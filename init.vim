@@ -1,3 +1,17 @@
+" {{{ Functions
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
+function! DiffToggle()
+    if &diff
+        diffoff
+    else
+        diffthis
+    endif
+:endfunction
+" }}}
+
 " {{{ Plugins
 call plug#begin('~/.config/nvim/plugged')
 " {{{ Colorschemes
@@ -13,6 +27,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/unite-outline'
 Plug 'Shougo/unite-session'
@@ -24,6 +39,13 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-easy-align'
 call plug#end()
 " {{{ Plugin Settings
+
+" {{{ Deoplete
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+" }}}
+
 " {{{ Unite
 let g:unite_source_history_yank_enable = 1
 let g:unite_split_rule = "botright"
@@ -61,15 +83,6 @@ endfunction
 " }}}
 " }}}
 
-" {{{ Functions
-function! DiffToggle()
-    if &diff
-        diffoff
-    else
-        diffthis
-    endif
-:endfunction
-" }}}
 
 " {{{ Settings
 set number
