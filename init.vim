@@ -4,9 +4,10 @@ function! DoRemote(arg)
 endfunction
 
 function! MyFoldText()
-    let nl = v:foldend - v:foldstart + 1
+    let n = v:foldend - v:foldstart + 1
     let linetext = substitute(getline(v:foldstart),"^ *","",1)
-    let txt = '--※ ' . linetext . ' [' . nl . ' lines] '
+    let text_without_fold_markers = substitute(linetext, '.*{\{3}\s*', ' ', 'g')
+    let txt = '--※ ' . text_without_fold_markers . ' [' . n . ' lines] '
     return txt
 endfunction
 
