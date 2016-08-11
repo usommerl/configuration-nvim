@@ -9,7 +9,7 @@ function! DiffToggle()
     else
         diffthis
     endif
-:endfunction
+endfunction
 " }}}
 
 " {{{ Plugins
