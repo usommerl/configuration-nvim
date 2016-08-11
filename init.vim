@@ -3,6 +3,13 @@ function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 
+function! MyFoldText()
+    let nl = v:foldend - v:foldstart + 1
+    let linetext = substitute(getline(v:foldstart),"^ *","",1)
+    let txt = '--※ ' . linetext . ' [' . nl . ' lines] '
+    return txt
+endfunction
+
 function! DiffToggle()
     if &diff
         diffoff
@@ -37,6 +44,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'Konfekt/FastFold'
+Plug 'kopischke/vim-stay'
 call plug#end()
 " {{{ Plugin Settings
 
@@ -44,6 +53,13 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+" }}}
+
+" {{{ FastFold
+let g:ruby_fold = 1
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " }}}
 
 " {{{ Unite
@@ -82,7 +98,6 @@ endfunction
 " }}}
 " }}}
 
-
 " {{{ Settings
 set number
 set relativenumber
@@ -94,7 +109,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set foldmethod=syntax
+set foldtext=MyFoldText()
 set foldlevelstart=99
 set listchars=tab:▸\ ,trail:█,nbsp:%
 set list
@@ -158,7 +173,5 @@ command! Sw w !sudo tee % > /dev/null
 " {{{ Autocommands
 au! BufWritePost $MYVIMRC nested source $MYVIMRC | setlocal foldmethod=marker
 au! Filetype scala,java,ruby,sh,vim let &l:colorcolumn=81
-au! BufWinLeave *.* setlocal backupcopy=auto|mkview
-au! BufWinEnter *.* silent! loadview
 au! VimResized * :wincmd =
 " }}}
