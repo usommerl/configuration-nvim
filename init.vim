@@ -58,7 +58,6 @@ call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
 call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
-
 " {{{ Lightline
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
@@ -113,7 +112,7 @@ nnoremap          <C-e>            4<C-e>
 nnoremap          <C-y>            4<C-y>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
-nnoremap <silent> <leader>bd       :<C-u>bp\|bd #<cr>
+nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
