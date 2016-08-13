@@ -34,6 +34,7 @@ Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/unite.vim'
@@ -50,19 +51,21 @@ Plug 'kopischke/vim-stay'
 call plug#end()
 " {{{ Plugin Settings
 
+" {{{ Undotree
+let g:undotree_WindowLayout = 4
+let g:undotree_SetFocusWhenToggle = 1
+" }}}
 " {{{ Deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 " }}}
-
 " {{{ FastFold
 let g:ruby_fold = 1
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " }}}
-
 " {{{ Unite
 let g:unite_source_history_yank_enable = 1
 let g:unite_split_rule = "botright"
@@ -115,6 +118,7 @@ set foldlevelstart=99
 set listchars=tab:▸\ ,trail:█,nbsp:%
 set list
 set noshowmode
+set undofile
 colorscheme seoul256
 " }}}
 
@@ -161,6 +165,7 @@ nnoremap <silent> <leader>sc       :<C-u>UniteSessionLoad default<cr>:bufdo bd!<
 nnoremap <silent> <leader>st       :<C-u>echo v:this_session<cr>
 nnoremap          <leader>tn       :<C-u>tabnew<cr>
 nnoremap          <leader>tc       :<C-u>tabclose<cr>
+nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
 nnoremap <silent> <leader>w        :<C-u>set wrap!<cr>
 nnoremap <silent> <leader>yy       :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
