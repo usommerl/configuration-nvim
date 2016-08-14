@@ -49,9 +49,14 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'Konfekt/FastFold'
 Plug 'kopischke/vim-stay'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 " {{{ Plugin Settings
-
+" {{{ IndentLine
+let g:indentLine_char = '┊'
+let g:indentLine_noConcealCursor=1
+let g:indentLine_fileTypeExclude = ['text', 'help']
+" }}}
 " {{{ Peekaboo
 let g:peekaboo_window = 'vertical botright 70new'
 " }}}
@@ -104,7 +109,6 @@ function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 " }}}
-
 " }}}
 " }}}
 
