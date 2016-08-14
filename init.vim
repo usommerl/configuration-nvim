@@ -34,6 +34,7 @@ Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
@@ -51,6 +52,9 @@ Plug 'kopischke/vim-stay'
 call plug#end()
 " {{{ Plugin Settings
 
+" {{{ Peekaboo
+let g:peekaboo_window = 'vertical botright 70new'
+" }}}
 " {{{ Undotree
 let g:undotree_WindowLayout = 4
 let g:undotree_SetFocusWhenToggle = 1
