@@ -6,9 +6,8 @@ endfunction
 function! MyFoldText()
   let n = v:foldend - v:foldstart + 1
   let linetext = substitute(getline(v:foldstart),"^ *","",1)
-  let text_without_fold_markers = substitute(linetext, '.*{\{3}\s*', ' ', 'g')
-  let txt = '--' . text_without_fold_markers . ' [' . n . ' lines] '
-  return txt
+  let text_without_fold_markers = substitute(linetext, '.*{\{3}\s*', '', 'g')
+  return '-- ' . text_without_fold_markers . ' '
 endfunction
 
 function! DiffToggle()
