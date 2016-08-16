@@ -164,7 +164,7 @@ nnoremap <silent> <leader>gg       :<C-u>Unite -buffer-name=grep -no-empty grep<
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
-nnoremap          <leader>l        :set list!<cr>
+nnoremap          <leader>l        :setlocal list!<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>rr       :<C-u>Unite -buffer-name=register register<cr>
 nnoremap          <leader>r<space> :<C-u>%s/\s\+$/<cr>
