@@ -139,8 +139,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap                  +        <C-a>
 nnoremap                  -        <C-x>
 nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
-nnoremap          <C-e>            4<C-e>
-nnoremap          <C-y>            4<C-y>
+nnoremap          <C-e>            6<C-e>
+nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
