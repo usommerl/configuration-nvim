@@ -140,14 +140,13 @@ nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <leader>bb       :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>bb       :<C-u>Buffers<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
-nnoremap <silent> <leader>fb       :<C-u>Buffers<cr>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>Gst      :<C-u>Gstatus<cr>
