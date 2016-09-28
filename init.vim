@@ -27,6 +27,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 " }}}
 Plug 'airblade/vim-gitgutter'
+Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
