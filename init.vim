@@ -156,8 +156,9 @@ nnoremap          <leader>Gb       :<C-u>Gblame<cr>
 nnoremap          <leader>Ghr      :<C-u>GitGutterUndoHunk<cr>
 nnoremap          <leader>Gha      :<C-u>GitGutterStageHunk<cr>
 nnoremap          <leader>Ghp      :<C-u>GitGutterPreviewHunk<cr>
-nnoremap          <leader>Gvb      :<C-u>Gitv<cr>
-nnoremap          <leader>Gvf      :<C-u>Gitv!<cr>
+nnoremap          <leader>Gl       :<C-u>GV<cr>
+nnoremap          <leader>GL       :<C-u>GV!<cr>
+nnoremap          <leader>Gw       :<C-u>Gwrite<cr>
 nnoremap <silent> <leader>gg       :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
