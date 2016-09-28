@@ -143,6 +143,7 @@ nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <leader>bb       :<C-u>Buffers<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
+nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
@@ -174,7 +175,7 @@ nnoremap <silent> <leader>sn       :<C-u>Unite -buffer-name=sessions -start-inse
 nnoremap <silent> <leader>sc       :<C-u>UniteSessionLoad default<cr>:bufdo bd!<cr>
 nnoremap <silent> <leader>st       :<C-u>echo v:this_session<cr>
 nnoremap          <leader>tn       :<C-u>tabnew<cr>
-nnoremap          <leader>tc       :<C-u>tabclose<cr>
+nnoremap          <leader>td       :<C-u>tabclose<cr>
 nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
 nnoremap <silent> <leader>w        :<C-u>set wrap!<cr>
 nnoremap <silent> <leader>yy       :<C-u>Unite -buffer-name=yanks history/yank<cr>
