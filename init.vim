@@ -21,8 +21,7 @@ endfunction
 " {{{ Plugins
 call plug#begin('~/.config/nvim/plugged')
 " {{{ Colorschemes
-Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/base16-vim'
+Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 " }}}
