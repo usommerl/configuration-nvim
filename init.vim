@@ -48,6 +48,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'Konfekt/FastFold'
 Plug 'kopischke/vim-stay'
 Plug 'kopischke/vim-fetch'
+Plug 'vim-scripts/bats.vim'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 " {{{ Plugin Settings
