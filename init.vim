@@ -141,7 +141,6 @@ nnoremap                  -        <C-x>
 nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
-tnoremap          <Esc>            <C-\><C-n>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <leader>bb       :<C-u>Buffers<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
