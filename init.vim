@@ -24,6 +24,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'cohama/lexima.vim'
