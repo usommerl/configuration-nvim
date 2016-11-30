@@ -132,6 +132,7 @@ set nofoldenable
 set listchars=tab:▸\ ,trail:█,nbsp:%
 set list
 set noshowmode
+set inccommand=nosplit
 set undofile
 colorscheme seoul256
 " }}}
