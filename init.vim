@@ -39,6 +39,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-slash'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/unite-outline'
