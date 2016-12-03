@@ -158,7 +158,7 @@ nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
-nnoremap          <leader>Gst      :<C-u>Gstatus<cr>
+nnoremap          <leader>Gs       :<C-u>Gstatus<cr>
 nnoremap          <leader>Gc       :<C-u>Gcommit -v<cr>
 nnoremap          <leader>Gb       :<C-u>Gblame<cr>
 nnoremap          <leader>Ghr      :<C-u>GitGutterUndoHunk<cr>
