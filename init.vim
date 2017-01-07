@@ -196,8 +196,9 @@ command! Sw w !sudo tee % > /dev/null
 " }}}
 
 " {{{ Autocommands
-au! BufWritePost $MYVIMRC nested source $MYVIMRC | setlocal foldmethod=marker
-au! Filetype scala,java,groovy,ruby,sh,vim let &l:colorcolumn=81
+au! BufWritePost $MYVIMRC nested source $MYVIMRC
+au! BufEnter $MYVIMRC setlocal foldmethod=marker
+au! Filetype scala,java,groovy,ruby,sh,zsh,vim let &l:colorcolumn=81
 au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
 " }}}
