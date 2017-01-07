@@ -25,6 +25,7 @@ Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'cocopon/iceberg.vim'
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'cohama/lexima.vim'
