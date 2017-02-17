@@ -149,6 +149,7 @@ nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <leader>bb       :<C-u>Buffers<cr>
+nnoremap <silent> <leader>bm       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
