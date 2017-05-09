@@ -143,6 +143,7 @@ set noshowmode
 set inccommand=nosplit
 set undofile
 colorscheme seoul256
+let g:netrw_banner=0
 " }}}
 
 " {{{ Keys
@@ -163,6 +164,7 @@ vnoremap <silent> <Leader>dl       :Linediff<CR>
 nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
+nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
