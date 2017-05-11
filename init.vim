@@ -92,7 +92,7 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 let g:unite_source_history_yank_enable = 1
 let g:unite_split_rule = "botright"
 let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
+let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden -f'
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_session_enable_auto_save = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
