@@ -103,6 +103,7 @@ call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
 " {{{ Ensime
 let ensime_server_v2=1
+let EnErrorStyle='Underlined'
 " }}}
 " {{{ Lightline
 let g:lightline = {
