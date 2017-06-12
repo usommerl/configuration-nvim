@@ -34,6 +34,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
 " }}}
 Plug 'airblade/vim-gitgutter'
+Plug 'brooth/far.vim'
 Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'ensime/ensime-vim'
@@ -126,6 +127,14 @@ function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 " }}}
+" {{{ Far
+let g:far#source = 'agnvim'
+let g:far#preview_window_height = 20
+let g:far#window_layout = 'tab'
+au! FileType far_vim
+             \ setlocal nolist |
+             \ nnoremap <buffer> <silent> q :bd<cr>
+" }}}
 " }}}
 " }}}
 
@@ -172,6 +181,7 @@ nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
+nnoremap          <leader>fr       :<C-u>Far  .<left><left>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>Gs       :<C-u>Gstatus<cr>
@@ -183,7 +193,7 @@ nnoremap          <leader>Ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>Gl       :<C-u>GV<cr>
 nnoremap          <leader>GL       :<C-u>GV!<cr>
 nnoremap          <leader>Gw       :<C-u>Gwrite<cr>
-nnoremap <silent> <leader>gg       :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
+nnoremap          <leader>gg       :<C-u>F  .<left><left>
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
