@@ -39,6 +39,7 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'ensime/ensime-vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
+Plug 'jlfwong/vim-mercenary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
@@ -186,6 +187,7 @@ nnoremap <silent> <leader>gg       :<C-u>Unite -buffer-name=grep -no-empty grep<
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
+nnoremap          <leader>Hb       :<C-u>HGblame<cr>
 nnoremap          <leader>l        :setlocal list!<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>rr       :<C-u>Unite -buffer-name=register register<cr>
