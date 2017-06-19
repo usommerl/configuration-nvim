@@ -48,6 +48,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-slash'
 Plug 'mbbill/undotree'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
@@ -135,6 +136,9 @@ au! FileType far_vim
              \ setlocal nolist |
              \ nnoremap <buffer> <silent> q :bd<cr>
 " }}}
+" {{{ Neoformat
+let g:neoformat_enabled_typescript = ['prettier', 'tsfmt']
+" }}}
 " }}}
 " }}}
 
@@ -181,6 +185,7 @@ nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
+nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
 nnoremap          <leader>fr       :<C-u>Far  .<left><left>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
