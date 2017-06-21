@@ -138,6 +138,7 @@ au! FileType far_vim
 " }}}
 " {{{ Neoformat
 let g:neoformat_enabled_typescript = ['prettier', 'tsfmt']
+let g:neoformat_enabled_scss = ['prettier']
 " }}}
 " }}}
 " }}}
