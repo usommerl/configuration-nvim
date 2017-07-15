@@ -165,6 +165,7 @@ set inccommand=nosplit
 set undofile
 colorscheme seoul256
 let g:netrw_banner=0
+let g:rust_recommended_style = 0
 " }}}
 
 " {{{ Keys
