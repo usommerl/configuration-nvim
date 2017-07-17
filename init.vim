@@ -235,7 +235,7 @@ command! Sw w !sudo tee % > /dev/null
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
 au! BufWritePost * Neomake
 au! BufEnter $MYVIMRC setlocal foldmethod=marker
-au! Filetype scala,java,groovy,ruby,sh,zsh,vim,typescript let &l:colorcolumn=81
+au! Filetype scala,java,groovy,ruby,sh,zsh,vim,typescript,rust let &l:colorcolumn=81
 au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
 au! FileType help nnoremap <buffer> <silent>q :bd<cr>
