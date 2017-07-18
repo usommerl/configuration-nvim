@@ -187,6 +187,7 @@ nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>ff       :<C-u>Files<cr>
 nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
+vnoremap <silent> <leader>fo       :Neoformat<cr>
 nnoremap          <leader>fr       :<C-u>Far  .<left><left>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
