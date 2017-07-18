@@ -48,6 +48,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-slash'
 Plug 'mbbill/undotree'
+Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
@@ -231,6 +232,7 @@ command! Sw w !sudo tee % > /dev/null
 
 " {{{ Autocommands
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
+au! BufWritePost * Neomake
 au! BufEnter $MYVIMRC setlocal foldmethod=marker
 au! Filetype scala,java,groovy,ruby,sh,zsh,vim,typescript let &l:colorcolumn=81
 au Filetype ruby setlocal re=1
