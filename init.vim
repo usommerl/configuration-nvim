@@ -242,5 +242,6 @@ au! BufEnter $MYVIMRC setlocal foldmethod=marker
 au! Filetype scala,java,groovy,ruby,sh,zsh,vim,typescript,rust let &l:colorcolumn=81
 au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
-au! FileType help nnoremap <buffer> <silent>q :bd<cr>
+au! FileType help,qf nnoremap <buffer> <silent>q :bd<cr>
+au! Filetype man nnoremap <buffer> <silent> <leader>o :call man#show_toc()<cr><C-W>L:exec 'vertical resize '. string(&columns * 0.33)<cr>
 " }}}
