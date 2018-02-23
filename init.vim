@@ -37,6 +37,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'brooth/far.vim'
 Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/linediff.vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ensime/ensime-vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
@@ -104,6 +105,9 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
 call unite#custom#source('grep', 'max_candidates', 0)
+" }}}
+" {{{ EditorConfig
+let g:EditorConfig_max_line_indicator = "line"
 " }}}
 " {{{ Ensime
 let ensime_server_v2=1
