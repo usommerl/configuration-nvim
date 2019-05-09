@@ -179,6 +179,8 @@ nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
+nnoremap <silent> <Leader>dg       :diffget<CR>
+nnoremap <silent> <Leader>dp       :diffput<CR>
 vnoremap <silent> <Leader>dl       :Linediff<CR>
 nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
