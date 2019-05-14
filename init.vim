@@ -126,10 +126,10 @@ function! LightLineFugitive()
 endfunction
 " }}}
 " {{{ Far
-let g:far#source = 'agnvim'
+let g:far#source = 'rgnvim'
 let g:far#preview_window_height = 20
 let g:far#window_layout = 'tab'
-au! FileType far_vim
+au! FileType far
              \ setlocal nolist |
              \ nnoremap <buffer> <silent> q :bd<cr>
 " }}}
@@ -201,7 +201,7 @@ nnoremap          <leader>Ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>Gl       :<C-u>GV<cr>
 nnoremap          <leader>GL       :<C-u>GV!<cr>
 nnoremap          <leader>Gw       :<C-u>Gwrite<cr>
-nnoremap          <leader>gg       :<C-u>F  .<left><left>
+nnoremap          <leader>gg       :<C-u>F  **/*<left><left><left><left><left>
 nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
