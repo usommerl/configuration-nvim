@@ -167,7 +167,7 @@ set list
 set noshowmode
 set inccommand=nosplit
 set undofile
-colorscheme seoul256
+colorscheme gruvbox
 let g:netrw_banner=0
 let g:rust_recommended_style = 0
 " }}}
