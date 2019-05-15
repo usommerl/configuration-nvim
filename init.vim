@@ -202,6 +202,7 @@ nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>Gs       :<C-u>Gstatus<cr>
 nnoremap          <leader>Gc       :<C-u>Gcommit -v<cr>
+nnoremap          <leader>Gp       :<C-u>Gpush<cr>
 nnoremap          <leader>Gb       :<C-u>Gblame<cr>
 nnoremap          <leader>Ghr      :<C-u>GitGutterUndoHunk<cr>
 nnoremap          <leader>Gha      :<C-u>GitGutterStageHunk<cr>
