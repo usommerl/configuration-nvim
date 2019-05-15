@@ -144,9 +144,11 @@ let g:neoformat_enabled_scss = ['prettier']
 "
 if has('nvim-0.4')
   set wildoptions=pum
+  set pumblend=15
 endif
 
 set autochdir
+set termguicolors
 set number
 set relativenumber
 set cursorline
