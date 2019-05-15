@@ -141,6 +141,11 @@ let g:neoformat_enabled_scss = ['prettier']
 " }}}
 
 " {{{ Settings
+"
+if has('nvim-0.4')
+  set wildoptions=pum
+endif
+
 set number
 set relativenumber
 set cursorline
