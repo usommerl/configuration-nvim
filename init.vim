@@ -146,6 +146,7 @@ if has('nvim-0.4')
   set wildoptions=pum
 endif
 
+set autochdir
 set number
 set relativenumber
 set cursorline
