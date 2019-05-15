@@ -200,8 +200,7 @@ vnoremap <silent> <leader>fo       :Neoformat<cr>
 nnoremap          <leader>fr       :<C-u>Far  .<left><left>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
-nnoremap          <leader>Gs       :<C-u>Gstatus<cr>
-nnoremap          <leader>Gc       :<C-u>Gcommit -v<cr>
+nnoremap          <leader>G        :<C-u>Gstatus<cr>
 nnoremap          <leader>Gp       :<C-u>Gpush<cr>
 nnoremap          <leader>Gb       :<C-u>Gblame<cr>
 nnoremap          <leader>Ghr      :<C-u>GitGutterUndoHunk<cr>
