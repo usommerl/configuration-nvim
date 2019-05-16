@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
 " {{{ Colorschemes
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
-Plug 'morhetz/gruvbox'
+Plug 'noah/vim256-color'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
 " }}}
@@ -107,7 +107,7 @@ let g:EditorConfig_max_line_indicator = "line"
 " }}}
 " {{{ Lightline
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [['mode', 'absolutepath', 'modified'], ['fugitive']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
@@ -167,7 +167,7 @@ set list
 set noshowmode
 set inccommand=nosplit
 set undofile
-colorscheme gruvbox
+colorscheme Tomorrow-Night-Eighties
 let g:netrw_banner=0
 let g:rust_recommended_style = 0
 " }}}
