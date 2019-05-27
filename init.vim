@@ -34,6 +34,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
 " }}}
 Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-rooter'
 Plug 'brooth/far.vim'
 Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/linediff.vim'
@@ -147,7 +148,6 @@ if has('nvim-0.4')
   set pumblend=15
 endif
 
-set autochdir
 set termguicolors
 set number
 set relativenumber
