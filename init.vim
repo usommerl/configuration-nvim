@@ -229,7 +229,6 @@ nnoremap          <leader>td       :<C-u>tabclose<cr>
 nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
 nnoremap <silent> <leader>w        :<C-u>set wrap!<cr>
 nnoremap          <leader>x        :<C-u>call ToggleExpensiveUIFeatures()<cr>
-nnoremap <silent> <leader>yy       :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
 tnoremap <Esc> <C-\><C-n>
