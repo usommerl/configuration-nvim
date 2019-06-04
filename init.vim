@@ -233,10 +233,6 @@ nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
 tnoremap <Esc> <C-\><C-n>
 "}}}
 
-" {{{ Commands
-command! Sw w !sudo tee % > /dev/null
-" }}}
-
 " {{{ Autocommands
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
 au! BufEnter $MYVIMRC setlocal foldmethod=marker
