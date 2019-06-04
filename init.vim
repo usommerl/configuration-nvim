@@ -245,21 +245,21 @@ nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
 vnoremap <silent> <leader>fo       :Neoformat<cr>
 nnoremap          <leader>fr       :<C-u>Far  .<left><left>
 nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
-nnoremap          <leader>Gd       :<C-u>Gdiff<cr>
-nnoremap          <leader>GG       :<C-u>Gstatus<cr>
-nnoremap          <leader>Gp       :<C-u>Gpush<cr>
-nnoremap          <leader>Gb       :<C-u>Gblame<cr>
-nnoremap          <leader>Ghr      :<C-u>GitGutterUndoHunk<cr>
-nnoremap          <leader>Gha      :<C-u>GitGutterStageHunk<cr>
-nnoremap          <leader>Ghp      :<C-u>GitGutterPreviewHunk<cr>
-nnoremap          <leader>Gl       :<C-u>GV<cr>
-nnoremap          <leader>GL       :<C-u>GV!<cr>
-nnoremap          <leader>Gw       :<C-u>Gwrite<cr>
-nnoremap          <leader>gg       :<C-u>F  **/*<left><left><left><left><left>
-nnoremap          <leader>go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
-nnoremap <silent> <leader>gr       :<C-u>UniteResume grep<cr>
-nnoremap <silent> <leader>gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
-nnoremap          <leader>Hb       :<C-u>HGblame<cr>
+nnoremap          <leader>gd       :<C-u>Gdiff<cr>
+nnoremap          <leader>gg       :<C-u>Gstatus<cr>
+nnoremap          <leader>gp       :<C-u>Gpush<cr>
+nnoremap          <leader>gb       :<C-u>Gblame<cr>
+nnoremap          <leader>ghr      :<C-u>GitGutterUndoHunk<cr>
+nnoremap          <leader>gha      :<C-u>GitGutterStageHunk<cr>
+nnoremap          <leader>ghp      :<C-u>GitGutterPreviewHunk<cr>
+nnoremap          <leader>gl       :<C-u>GV<cr>
+nnoremap          <leader>gL       :<C-u>GV!<cr>
+nnoremap          <leader>gw       :<C-u>Gwrite<cr>
+nnoremap          <leader>GG       :<C-u>F  **/*<left><left><left><left><left>
+nnoremap          <leader>Go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
+nnoremap <silent> <leader>Gr       :<C-u>UniteResume grep<cr>
+nnoremap <silent> <leader>Gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
+nnoremap          <leader>hb       :<C-u>HGblame<cr>
 nnoremap          <leader>l        :setlocal list!<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>rr       :<C-u>Unite -buffer-name=register register<cr>
