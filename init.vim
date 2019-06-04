@@ -50,7 +50,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/unite-outline'
 Plug 'Shougo/unite-session'
@@ -77,11 +76,6 @@ let g:peekaboo_window = 'vertical botright 70new'
 " {{{ Undotree
 let g:undotree_WindowLayout = 4
 let g:undotree_SetFocusWhenToggle = 1
-" }}}
-" {{{ Deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 " }}}
 " {{{ FastFold
 let g:is_bash = 1
