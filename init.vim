@@ -142,6 +142,14 @@ set nobackup                                    " Some server have issues with b
 set nowritebackup
 set cmdheight=2                                 " Better display for messages
 
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 " Use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
@@ -154,23 +162,9 @@ nmap gy <Plug>(coc-type-definition)
 nmap gi <Plug>(coc-implementation)
 nmap gr <Plug>(coc-references)
 
-" Remap for do codeAction of current line
-nmap <leader>ac <Plug>(coc-codeaction)
-" Remap for do action format
-nnoremap <silent> F :call CocAction('format')<CR>
-" Use K for show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if &filetype == 'vim'
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+nmap     <leader> a         <Plug>(coc-codeaction)
+nnoremap <silent> F         :call CocAction('format')<CR>
+nnoremap <silent> K         :call <SID>show_documentation()<CR>
 
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
