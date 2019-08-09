@@ -32,6 +32,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'noah/vim256-color'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
+Plug 'arcticicestudio/nord-vim'
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
