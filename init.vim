@@ -138,7 +138,7 @@ let g:neoformat_enabled_scss = ['prettier']
 
 set updatetime=300                              " Smaller updatetime for CursorHold & CursorHoldI
 set shortmess+=c                                " don't give |ins-completion-menu| messages.
-set signcolumn=yes                              " always show signcolumns
+set signcolumn=yes:2                            " always show signcolumns
 set nobackup                                    " Some server have issues with backup files, see #649
 set nowritebackup
 set cmdheight=2                                 " Better display for messages
