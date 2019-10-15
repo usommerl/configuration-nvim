@@ -36,15 +36,13 @@ Plug 'arcticicestudio/nord-vim'
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
-Plug 'brooth/far.vim'
 Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'liuchengxu/vim-clap'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
@@ -66,6 +64,9 @@ Plug 'vim-scripts/bats.vim'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 " {{{ Plugin Settings
+" {{{ vim-clap
+let g:clap_disable_run_from_project_root = v:true
+" }}}
 " {{{ IndentLine
 let g:indentLine_char = '┊'
 let g:indentLine_noConcealCursor=1
@@ -89,14 +90,10 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " {{{ Unite
 let g:unite_source_history_yank_enable = 1
 let g:unite_split_rule = "botright"
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden -f'
-let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_session_enable_auto_save = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
-call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
 " {{{ EditorConfig
 let g:EditorConfig_max_line_indicator = "line"
@@ -120,14 +117,6 @@ let g:lightline = {
 function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
-" }}}
-" {{{ Far
-let g:far#source = 'rgnvim'
-let g:far#preview_window_height = 20
-let g:far#window_layout = 'tab'
-au! FileType far
-             \ setlocal nolist |
-             \ nnoremap <buffer> <silent> q :bd<cr>
 " }}}
 " {{{ Neoformat
 let g:neoformat_enabled_typescript = ['prettier', 'tsfmt']
@@ -216,7 +205,7 @@ nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <leader>bb       :<C-u>Buffers<cr>
+nnoremap <silent> <leader>bb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <leader>bm       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
@@ -229,11 +218,9 @@ nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
-nnoremap <silent> <leader>ff       :<C-u>Files<cr>
+nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
 nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
 vnoremap <silent> <leader>fo       :Neoformat<cr>
-nnoremap          <leader>fr       :<C-u>Far  .<left><left>
-nnoremap <silent> <leader>fe       :<C-u>FZF -e -m<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
 nnoremap          <leader>gp       :<C-u>Gpush<cr>
@@ -244,9 +231,7 @@ nnoremap          <leader>ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>gl       :<C-u>GV<cr>
 nnoremap          <leader>gL       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
-nnoremap          <leader>GG       :<C-u>F  **/*<left><left><left><left><left>
-nnoremap          <leader>Go       :<C-u>Unite -buffer-name=grep -no-empty grep:.:
-nnoremap <silent> <leader>Gr       :<C-u>UniteResume grep<cr>
+nnoremap          <leader>GG       :<C-u>Clap grep<cr>
 nnoremap <silent> <leader>Gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
 nnoremap          <leader>hb       :<C-u>HGblame<cr>
 nnoremap          <leader>l        :setlocal list!<cr>
