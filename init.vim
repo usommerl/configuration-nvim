@@ -220,6 +220,8 @@ nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
 nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
+nnoremap <silent> <leader>fh       :<C-u>Clap command_history<cr>
+nnoremap <silent> <leader>fl       :<C-u>Clap blines<cr>
 nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
 vnoremap <silent> <leader>fo       :Neoformat<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
