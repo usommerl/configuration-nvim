@@ -193,8 +193,6 @@ nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
-nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
 nnoremap <silent> <Leader>dg       :diffget<CR>
