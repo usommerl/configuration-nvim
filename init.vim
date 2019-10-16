@@ -205,7 +205,6 @@ nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <leader>bb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <leader>bm       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
@@ -218,7 +217,9 @@ nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
+nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
+nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
 nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
 vnoremap <silent> <leader>fo       :Neoformat<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
@@ -231,8 +232,6 @@ nnoremap          <leader>ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>gl       :<C-u>GV<cr>
 nnoremap          <leader>gL       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
-nnoremap          <leader>GG       :<C-u>Clap grep<cr>
-nnoremap <silent> <leader>Gb       :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
 nnoremap          <leader>hb       :<C-u>HGblame<cr>
 nnoremap          <leader>l        :setlocal list!<cr>
 nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
