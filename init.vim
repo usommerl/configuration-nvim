@@ -1,8 +1,4 @@
 " {{{ Functions
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
 function! MyFoldText()
   let linetext = substitute(getline(v:foldstart),"^ *","",1)
   let text_without_fold_markers = substitute(linetext, '.*{\{3}\s*', '', 'g')
@@ -110,7 +106,6 @@ endfunction
 let g:neoformat_enabled_typescript = ['prettier', 'tsfmt']
 let g:neoformat_enabled_scss = ['prettier']
 " }}}
-" }}}
 " {{{ coc.vim
 
 set updatetime=300                              " Smaller updatetime for CursorHold & CursorHoldI
@@ -152,9 +147,9 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }}}
 " }}}
+" }}}
 
 " {{{ Settings
-"
 if has('nvim-0.4')
   set wildoptions=pum
   set pumblend=15
