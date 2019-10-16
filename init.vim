@@ -49,10 +49,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/unite-outline'
-Plug 'Shougo/unite-session'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -86,14 +82,6 @@ let g:ruby_fold = 1
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
-" }}}
-" {{{ Unite
-let g:unite_source_history_yank_enable = 1
-let g:unite_split_rule = "botright"
-let g:unite_source_session_enable_auto_save = 1
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#custom#source('buffer', 'sorters', 'sorter_word')
-call unite#custom#source('session', 'sorters', 'sorter_word')
 " }}}
 " {{{ EditorConfig
 let g:EditorConfig_max_line_indicator = "line"
@@ -205,7 +193,6 @@ nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <leader>bm       :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd       :<C-u>b#\|bd #<cr>
 nnoremap <silent> <leader>bc       :<C-u>%bdelete<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
@@ -236,15 +223,8 @@ nnoremap          <leader>gL       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
 nnoremap          <leader>hb       :<C-u>HGblame<cr>
 nnoremap          <leader>l        :setlocal list!<cr>
-nnoremap <silent> <leader>o        :<C-u>Unite -buffer-name=outline -vertical outline<cr>
-nnoremap <silent> <leader>rr       :<C-u>Unite -buffer-name=register register<cr>
 nnoremap          <leader>r<space> :<C-u>%s/\s\+$/<cr>
 vnoremap          <leader>r<space> :s/\s\+$/<cr>
-nnoremap <silent> <leader>ss       :<C-u>Unite -buffer-name=sessions -start-insert session<cr>
-nnoremap <silent> <leader>sw       :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
-nnoremap <silent> <leader>sn       :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
-nnoremap <silent> <leader>sc       :<C-u>UniteSessionLoad default<cr>:bufdo bd!<cr>
-nnoremap <silent> <leader>st       :<C-u>echo v:this_session<cr>
 nnoremap          <leader>tn       :<C-u>tabnew<cr>
 nnoremap          <leader>td       :<C-u>tabclose<cr>
 nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
