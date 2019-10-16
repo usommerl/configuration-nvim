@@ -215,9 +215,6 @@ nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
 nnoremap          <leader>gp       :<C-u>Gpush<cr>
 nnoremap          <leader>gb       :<C-u>Gblame<cr>
-nnoremap          <leader>ghr      :<C-u>GitGutterUndoHunk<cr>
-nnoremap          <leader>gha      :<C-u>GitGutterStageHunk<cr>
-nnoremap          <leader>ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>gl       :<C-u>GV<cr>
 nnoremap          <leader>gL       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
