@@ -198,6 +198,7 @@ nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
+nnoremap <silent> <leader>fr       :<C-u>Clap history<cr>
 nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
 nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
 nnoremap <silent> <leader>fh       :<C-u>Clap command_history<cr>
