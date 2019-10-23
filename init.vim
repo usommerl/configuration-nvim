@@ -209,8 +209,8 @@ nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
 nnoremap          <leader>gp       :<C-u>Gpush<cr>
 nnoremap          <leader>gb       :<C-u>Gblame<cr>
-nnoremap          <leader>gl       :<C-u>GV<cr>
-nnoremap          <leader>gL       :<C-u>GV!<cr>
+nnoremap          <leader>gL       :<C-u>GV<cr>
+nnoremap          <leader>gl       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
 nnoremap          <leader>hb       :<C-u>HGblame<cr>
 nnoremap          <leader>l        :setlocal list!<cr>
