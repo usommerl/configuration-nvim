@@ -100,6 +100,7 @@ function! LightLineFugitive()
 endfunction
 " }}}
 " {{{ Neoformat
+let g:neoformat_verbose = 0
 let g:neoformat_enabled_typescript = ['prettier', 'tsfmt']
 let g:neoformat_enabled_scss = ['prettier']
 " }}}
@@ -184,6 +185,8 @@ nnoremap                  -        <C-x>
 nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
+nnoremap <silent> <C-M-L>          :<C-u>Neoformat<cr>
+vnoremap <silent> <C-M-L>          :Neoformat<cr>
 nnoremap          <leader>.        :b#<cr>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
@@ -200,8 +203,6 @@ nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
 nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
 nnoremap <silent> <leader>fh       :<C-u>Clap command_history<cr>
 nnoremap <silent> <leader>fl       :<C-u>Clap blines<cr>
-nnoremap <silent> <leader>fo       :<C-u>Neoformat<cr>
-vnoremap <silent> <leader>fo       :Neoformat<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
 nnoremap          <leader>gp       :<C-u>Gpush<cr>
