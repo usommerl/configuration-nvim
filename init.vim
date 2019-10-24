@@ -81,7 +81,7 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " }}}
 " {{{ Lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'Tomorrow_Night_Eighties',
       \ 'active': {
       \   'left': [['mode', 'absolutepath', 'modified'], ['fugitive']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
