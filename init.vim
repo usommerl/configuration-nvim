@@ -5,6 +5,24 @@ function! MyFoldText()
   return '-- ' . text_without_fold_markers . ' '
 endfunction
 
+function! ColorschemeToggle()
+  let s:LightColors = get(s:, 'LightColors', 0)
+
+  if s:LightColors
+    let l:name = 'Tomorrow'
+    let s:LightColors = 0
+  else
+    let l:name = 'Tomorrow-Night-Eighties'
+    let s:LightColors = 1
+  endif
+
+  execute "colorscheme ". l:name
+  let g:lightline.colorscheme = substitute(l:name, '-', '_', 'g')
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+
 function! DiffToggle()
   if &diff
     diffoff
@@ -81,7 +99,6 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " }}}
 " {{{ Lightline
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night_Eighties',
       \ 'active': {
       \   'left': [['mode', 'absolutepath', 'modified'], ['fugitive']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
@@ -153,6 +170,10 @@ if has('nvim-0.4')
   set pumblend=15
 endif
 
+if !exists("s:LightColors")
+  call ColorschemeToggle()
+endif
+
 set termguicolors
 set number
 set relativenumber
@@ -172,7 +193,6 @@ set list
 set noshowmode
 set inccommand=nosplit
 set undofile
-colorscheme Tomorrow-Night-Eighties
 let g:netrw_banner=0
 let g:rust_recommended_style = 0
 " }}}
@@ -188,7 +208,8 @@ nnoremap          <C-y>            6<C-y>
 nnoremap <silent> <C-M-L>          :<C-u>Neoformat<cr>
 vnoremap <silent> <C-M-L>          :Neoformat<cr>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <Leader>c        :Clap colors<CR>
+nnoremap <silent> <Leader>ct       :<C-u>call ColorschemeToggle()<cr>
+nnoremap <silent> <Leader>cs       :Clap colors<CR>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
 nnoremap <silent> <Leader>dg       :diffget<CR>
