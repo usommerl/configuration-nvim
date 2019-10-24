@@ -188,6 +188,7 @@ nnoremap          <C-y>            6<C-y>
 nnoremap <silent> <C-M-L>          :<C-u>Neoformat<cr>
 vnoremap <silent> <C-M-L>          :Neoformat<cr>
 nnoremap          <leader>.        :b#<cr>
+nnoremap <silent> <Leader>c        :Clap colors<CR>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
 nnoremap <silent> <Leader>dg       :diffget<CR>
