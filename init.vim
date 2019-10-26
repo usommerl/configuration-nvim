@@ -192,7 +192,6 @@ nnoremap          <C-y>            6<C-y>
 nnoremap <silent> <C-M-L>          :<C-u>Neoformat<cr>
 vnoremap <silent> <C-M-L>          :Neoformat<cr>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <Leader>sc       :Clap colors<CR>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
 nnoremap <silent> <Leader>dg       :diffget<CR>
@@ -203,6 +202,7 @@ nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
+nnoremap <silent> <Leader>fc       :<C-u>Clap colors<cr>
 nnoremap <silent> <leader>fr       :<C-u>Clap history<cr>
 nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
 nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
