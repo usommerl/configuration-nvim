@@ -5,22 +5,10 @@ function! MyFoldText()
   return '-- ' . text_without_fold_markers . ' '
 endfunction
 
-function! ColorschemeToggle()
-  let s:LightColors = get(s:, 'LightColors', 0)
-
-  if s:LightColors
-    let l:name = 'Tomorrow'
-    let s:LightColors = 0
-  else
-    let l:name = 'Tomorrow-Night-Eighties'
-    let s:LightColors = 1
-  endif
-
-  execute "colorscheme ". l:name
-  let g:lightline.colorscheme = substitute(l:name, '-', '_', 'g')
+function! LightlineColorscheme(name)
+  let g:lightline.colorscheme = a:name
   call lightline#init()
   call lightline#colorscheme()
-  call lightline#update()
 endfunction
 
 function! DiffToggle()
@@ -170,10 +158,6 @@ if has('nvim-0.4')
   set pumblend=15
 endif
 
-if !exists("s:LightColors")
-  call ColorschemeToggle()
-endif
-
 set termguicolors
 set number
 set relativenumber
@@ -208,8 +192,7 @@ nnoremap          <C-y>            6<C-y>
 nnoremap <silent> <C-M-L>          :<C-u>Neoformat<cr>
 vnoremap <silent> <C-M-L>          :Neoformat<cr>
 nnoremap          <leader>.        :b#<cr>
-nnoremap <silent> <Leader>ct       :<C-u>call ColorschemeToggle()<cr>
-nnoremap <silent> <Leader>cs       :Clap colors<CR>
+nnoremap <silent> <Leader>sc       :Clap colors<CR>
 nnoremap <silent> <Leader>dw       :windo call DiffToggle()<CR>
 nnoremap <silent> <Leader>du       :diffupdate<CR>
 nnoremap <silent> <Leader>dg       :diffget<CR>
@@ -246,7 +229,7 @@ nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
 tnoremap <Esc> <C-\><C-n>
 "}}}
 
-" {{{ Autocommands
+" {{{ Autocommands & Colorscheme
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
 au! BufEnter $MYVIMRC setlocal foldmethod=marker
 au! Filetype scala,java,groovy,ruby,sh,zsh,typescript,rust let &l:colorcolumn=81
@@ -256,4 +239,14 @@ au! FileType help,qf nnoremap <buffer> <silent>q :bd<cr>
 au! Filetype man nnoremap <buffer> <silent> <leader>o :call man#show_toc()<cr><C-W>L:exec 'vertical resize '. string(&columns * 0.33)<cr>
 au! BufNewFile,BufRead *.avsc set filetype=json
 au BufRead,BufNewFile *.sbt set filetype=scala
+
+augroup LightlineColorscheme
+    autocmd!
+    autocmd ColorScheme nord call LightlineColorscheme('nord')
+    autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
+    autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
+    autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
+    autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
+augroup END
+colorscheme nord
 " }}}
