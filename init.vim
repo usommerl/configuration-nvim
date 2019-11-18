@@ -52,6 +52,7 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
+Plug 'simeji/winresizer'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -85,6 +86,10 @@ let g:ruby_fold = 1
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+" }}}
+" {{{ winresizer
+let g:winresizer_vert_resize = 1
+let g:winresizer_horiz_resize = 1
 " }}}
 " {{{ Lightline
 let g:lightline = {
