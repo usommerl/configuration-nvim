@@ -217,6 +217,9 @@ nnoremap <silent> <leader>fh       :<C-u>Clap command_history<cr>
 nnoremap <silent> <leader>fl       :<C-u>Clap blines<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
+nnoremap          <leader>ghr      :<C-u>GitGutterUndoHunk<cr>
+nnoremap          <leader>gha      :<C-u>GitGutterStageHunk<cr>
+nnoremap          <leader>ghp      :<C-u>GitGutterPreviewHunk<cr>
 nnoremap          <leader>gps      :<C-u>Gpush<cr>
 nnoremap          <leader>gpl      :<C-u>Gpull<cr>
 nnoremap          <leader>gb       :<C-u>Gblame<cr>
