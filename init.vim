@@ -52,7 +52,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
-Plug 'simeji/winresizer'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -61,6 +60,7 @@ Plug 'Konfekt/FastFold'
 Plug 'kopischke/vim-stay'
 Plug 'kopischke/vim-fetch'
 Plug 'vim-scripts/bats.vim'
+Plug 'dstein64/vim-win'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 " {{{ Plugin Settings
@@ -227,13 +227,13 @@ nnoremap          <leader>gL       :<C-u>GV<cr>
 nnoremap          <leader>gl       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
 nnoremap          <leader>hb       :<C-u>HGblame<cr>
-nnoremap          <leader>l        :setlocal list!<cr>
 nnoremap          <leader>r<space> :<C-u>%s/\s\+$/<cr>
 vnoremap          <leader>r<space> :s/\s\+$/<cr>
+nnoremap          <leader>sw       :<C-u>set wrap!<cr>
+nnoremap          <leader>sl       :<C-u>setlocal list!<cr>
 nnoremap          <leader>tn       :<C-u>tabnew<cr>
 nnoremap          <leader>td       :<C-u>tabclose<cr>
 nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
-nnoremap <silent> <leader>w        :<C-u>set wrap!<cr>
 nnoremap          <leader>x        :<C-u>call ToggleExpensiveUIFeatures()<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
