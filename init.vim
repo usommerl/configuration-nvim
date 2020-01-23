@@ -50,6 +50,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
+Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
@@ -134,22 +135,25 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Remap keys for gotos
-nmap gd <Plug>(coc-definition)
-nmap gy <Plug>(coc-type-definition)
-nmap gi <Plug>(coc-implementation)
-nmap gr <Plug>(coc-references)
 
-nmap     <leader> a         <Plug>(coc-codeaction)
-nnoremap <silent> F         :call CocAction('format')<CR>
-nnoremap <silent> K         :call <SID>show_documentation()<CR>
+nmap                      gd <Plug>(coc-definition)
+nmap                      gy <Plug>(coc-type-definition)
+nmap                      gi <Plug>(coc-implementation)
+nmap                      gr <Plug>(coc-references)
 
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+nmap              <leader>ac <Plug>(coc-codeaction)
+nmap              <leader>qf <Plug>(coc-fix-current)
+nmap              <leader>rn <Plug>(coc-rename)
+
+nnoremap <silent>         K  :call <SID>show_documentation()<CR>
+nnoremap <silent>  <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent>  <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent>  <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent>  <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent>  <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent>  <space>j  :<C-u>CocNext<CR>
+nnoremap <silent>  <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent>  <space>p  :<C-u>CocListResume<CR>
 " }}}
 " }}}
 " }}}
