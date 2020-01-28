@@ -33,6 +33,7 @@ Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'noah/vim256-color'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'mhartington/oceanic-next'
 Plug 'cocopon/iceberg.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
@@ -255,6 +256,7 @@ augroup LightlineColorscheme
     autocmd ColorScheme nord call LightlineColorscheme('nord')
     autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
     autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
+    autocmd ColorScheme OceanicNext call LightlineColorscheme('materia')
     autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
     autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
     autocmd ColorScheme one call LightlineColorscheme('one')
