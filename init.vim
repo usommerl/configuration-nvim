@@ -29,6 +29,7 @@ endfunction
 " {{{ Plugins
 call plug#begin('~/.config/nvim/plugged')
 " {{{ Colorschemes
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
 Plug 'noah/vim256-color'
@@ -260,6 +261,7 @@ augroup LightlineColorscheme
     autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
     autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
     autocmd ColorScheme one call LightlineColorscheme('one')
+    autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
 augroup END
 colorscheme nord
 " }}}
