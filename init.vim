@@ -126,6 +126,7 @@ let g:neoformat_enabled_scss = ['prettier']
 " }}}
 " {{{ coc.vim
 
+let mapleader = ","
 set updatetime=300                              " Smaller updatetime for CursorHold & CursorHoldI
 set shortmess+=c                                " don't give |ins-completion-menu| messages.
 set signcolumn=yes:2                            " always show signcolumns
@@ -154,7 +155,7 @@ nmap                      gi <Plug>(coc-implementation)
 nmap                      gr <Plug>(coc-references)
 
 nmap              <leader>ac <Plug>(coc-codeaction)
-nmap              <leader>qf <Plug>(coc-fix-current)
+nmap              <leader>,  :<C-u>CocFix<cr>
 nmap              <leader>rn <Plug>(coc-rename)
 
 nnoremap <silent>        gh  :call <SID>show_documentation()<CR>
