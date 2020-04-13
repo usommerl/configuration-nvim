@@ -62,6 +62,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'Konfekt/FastFold'
 Plug 'kopischke/vim-stay'
 Plug 'kopischke/vim-fetch'
+Plug 'vifm/vifm.vim'
 Plug 'vim-scripts/bats.vim'
 Plug 'dstein64/vim-win'
 Plug 'Yggdroot/indentLine'
@@ -69,6 +70,11 @@ call plug#end()
 " {{{ Plugin Settings
 " {{{ vim-clap
 let g:clap_disable_run_from_project_root = v:true
+" }}}
+" {{{ vifm
+let g:vifm_embed_split=1
+let g:vifm_replace_netrw=1
+let g:vifm_exec_args='-c "nnoremap ,e :q!<cr>" -c "set nols" -c "only" -c "set ruf= "'
 " }}}
 " {{{ IndentLine
 let g:indentLine_char = '┊'
@@ -208,7 +214,7 @@ vnoremap <silent> <Leader>dl       :Linediff<CR>
 nnoremap <silent> <Leader>dgl      :diffget LOCAL \| diffupdate<CR>
 nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
-nnoremap <silent> <leader>e        :<C-u>25Lexplore<cr>
+nnoremap <silent> <leader>e        :<C-u>vertical Vifm \| vertical resize 60 \|setlocal nonu nornu<cr>
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <Leader>fc       :<C-u>Clap colors<cr>
 nnoremap <silent> <leader>fr       :<C-u>Clap history<cr>
