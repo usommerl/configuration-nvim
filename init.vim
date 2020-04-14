@@ -263,7 +263,6 @@ tnoremap <Esc> <C-\><C-n>
 " {{{ Autocommands & Colorscheme
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
 au! BufEnter $MYVIMRC setlocal foldmethod=marker
-au! Filetype scala,java,groovy,ruby,sh,zsh,typescript,rust let &l:colorcolumn=121
 au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
 au! FileType help,qf nnoremap <buffer> <silent>q :bd<cr>
