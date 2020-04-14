@@ -267,15 +267,15 @@ au! BufNewFile,BufRead *.avsc set filetype=json
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 augroup LightlineColorscheme
-    autocmd!
-    autocmd ColorScheme nord call LightlineColorscheme('nord')
-    autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
-    autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
-    autocmd ColorScheme OceanicNext call LightlineColorscheme('materia')
-    autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
-    autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
-    autocmd ColorScheme one call LightlineColorscheme('one')
-    autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
+  autocmd!
+  autocmd ColorScheme nord call LightlineColorscheme('nord')
+  autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
+  autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
+  autocmd ColorScheme OceanicNext call LightlineColorscheme('materia')
+  autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
+  autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
+  autocmd ColorScheme one call LightlineColorscheme('one')
+  autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
 augroup END
 colorscheme nord
 " }}}
