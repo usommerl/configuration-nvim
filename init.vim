@@ -233,7 +233,7 @@ endif
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <Leader>fc       :<C-u>Clap colors<cr>
 nnoremap <silent> <leader>fr       :<C-u>Clap history<cr>
-nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
+nnoremap <silent> <leader>ff       :<C-u>Clap files --hidden<cr>
 nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
 nnoremap <silent> <leader>fh       :<C-u>Clap command_history<cr>
 nnoremap <silent> <leader>fl       :<C-u>Clap blines<cr>
