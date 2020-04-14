@@ -236,6 +236,7 @@ nnoremap <silent> <leader>ff       :<C-u>Clap files<cr>
 nnoremap <silent> <leader>fg       :<C-u>Clap grep<cr>
 nnoremap <silent> <leader>fh       :<C-u>Clap command_history<cr>
 nnoremap <silent> <leader>fl       :<C-u>Clap blines<cr>
+nnoremap <silent> <leader>fy       :<C-u>Clap yanks<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
 nnoremap          <leader>gps      :<C-u>Gpush<cr>
