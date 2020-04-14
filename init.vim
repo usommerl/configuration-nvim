@@ -70,6 +70,8 @@ call plug#end()
 " {{{ Plugin Settings
 " {{{ vim-clap
 let g:clap_disable_run_from_project_root = v:true
+let g:clap_layout = { 'relative': 'editor', 'width': '90%', 'col': '5%' }
+let g:clap_theme = 'material_design_dark'
 " }}}
 " {{{ vifm
 if executable('vifm')
