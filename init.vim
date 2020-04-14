@@ -240,6 +240,7 @@ nnoremap <silent> <leader>fl       :<C-u>Clap blines<cr>
 nnoremap <silent> <leader>fy       :<C-u>Clap yanks<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
+nnoremap          <leader>gc       :<C-u>Git commit -v<cr>
 nnoremap          <leader>gps      :<C-u>Gpush<cr>
 nnoremap          <leader>gpl      :<C-u>Gpull<cr>
 nnoremap          <leader>gb       :<C-u>Gblame<cr>
