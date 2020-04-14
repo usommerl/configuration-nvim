@@ -247,7 +247,6 @@ nnoremap          <leader>gb       :<C-u>Gblame<cr>
 nnoremap          <leader>gL       :<C-u>GV<cr>
 nnoremap          <leader>gl       :<C-u>GV!<cr>
 nnoremap          <leader>gw       :<C-u>Gwrite<cr>
-nnoremap          <leader>hb       :<C-u>HGblame<cr>
 nnoremap          <leader>r<space> :<C-u>%s/\s\+$/<cr>
 vnoremap          <leader>r<space> :s/\s\+$/<cr>
 nnoremap          <leader>sw       :<C-u>set wrap!<cr>
