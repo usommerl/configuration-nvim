@@ -32,6 +32,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
+Plug 'kaicataldo/material.vim'
 Plug 'noah/vim256-color'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'mhartington/oceanic-next'
@@ -274,12 +275,15 @@ augroup LightlineColorscheme
   autocmd!
   autocmd ColorScheme nord call LightlineColorscheme('nord')
   autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
-  autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
+  autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark,material call LightlineColorscheme('Tomorrow_Night_Eighties')
   autocmd ColorScheme OceanicNext call LightlineColorscheme('materia')
   autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
   autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
   autocmd ColorScheme one call LightlineColorscheme('one')
   autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
 augroup END
-colorscheme nord
+
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'darker'
+colorscheme material
 " }}}
