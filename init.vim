@@ -72,7 +72,6 @@ call plug#end()
 " {{{ vim-clap
 let g:clap_disable_run_from_project_root = v:true
 let g:clap_layout = { 'relative': 'editor', 'width': '90%', 'col': '5%' }
-let g:clap_theme = 'material_design_dark'
 let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden -g !.git*'
 " }}}
 " {{{ vifm
@@ -274,7 +273,8 @@ augroup LightlineColorscheme
   autocmd!
   autocmd ColorScheme nord call LightlineColorscheme('nord')
   autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
-  autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark,material call LightlineColorscheme('Tomorrow_Night_Eighties')
+  autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
+  autocmd ColorScheme material call LightlineColorscheme('material')
   autocmd ColorScheme OceanicNext call LightlineColorscheme('materia')
   autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
   autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
@@ -282,7 +282,5 @@ augroup LightlineColorscheme
   autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
 augroup END
 
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'darker'
-colorscheme nord
+colorscheme material
 " }}}
