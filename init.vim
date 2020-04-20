@@ -159,7 +159,7 @@ nmap                      gr <Plug>(coc-references)
 
 nmap              <leader>ac <Plug>(coc-codeaction)
 nmap              <leader>,  :<C-u>CocFix<cr>
-nmap              <leader>rn <Plug>(coc-rename)
+nmap              <leader>re <Plug>(coc-rename)
 
 nnoremap <silent>        gh  :call <SID>show_documentation()<CR>
 nnoremap <silent>  <space>a  :<C-u>CocList diagnostics<cr>
