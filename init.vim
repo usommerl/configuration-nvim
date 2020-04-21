@@ -266,7 +266,8 @@ au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
 au! FileType help,qf nnoremap <buffer> <silent>q :bd<cr>
 au! Filetype man nnoremap <buffer> <silent> <leader>o :call man#show_toc()<cr><C-W>L:exec 'vertical resize '. string(&columns * 0.33)<cr>
-au! BufNewFile,BufRead *.avsc set filetype=json
+au BufNewFile,BufRead *.avsc set filetype=json
+au BufNewFile,BufRead *.envrc set filetype=sh
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 augroup LightlineColorscheme
