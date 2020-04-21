@@ -284,4 +284,6 @@ augroup LightlineColorscheme
 augroup END
 
 colorscheme material
+" Workaround for weird materila theme highlight
+exec 'hi MatchParen guifg=red guibg=none gui=none cterm=none'
 " }}}
