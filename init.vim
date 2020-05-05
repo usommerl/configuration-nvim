@@ -106,20 +106,26 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " {{{ Lightline
 let g:lightline = {
       \ 'active': {
-      \   'left': [['mode', 'absolutepath', 'modified'], ['fugitive']],
+      \   'left': [['filename', 'fugitive', 'modified'], ['cocfunction', 'cocstatus']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
       \ },
       \ 'inactive': {
-      \   'left': [['absolutepath', 'modified']],
+      \   'left': [['filename', 'modified']],
       \   'right': [[], ['percent', 'lineinfo'], []]
       \ },
       \ 'component_function': {
-      \   'fugitive': 'LightLineFugitive'
+      \   'fugitive': 'FugitiveHead',
+      \   'cocstatus': 'LightLineCocStatus',
+      \   'cocfunction': 'LightLineCocCurrentFunction'
       \ }
       \ }
 
-function! LightLineFugitive()
-  return exists('*fugitive#head') ? fugitive#head() : ''
+function! LightLineCocStatus()
+  return exists('*coc#status') ? coc#status() : ''
+endfunction
+
+function! LightLineCocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
 endfunction
 " }}}
 " {{{ Neoformat
@@ -229,6 +235,8 @@ else
   nnoremap <silent> <leader>e      :<C-u>25Lexplore<cr>
 endif
 
+nnoremap          <leader>ed       :<C-u>:echo expand("%:p:h")<cr>
+nnoremap          <leader>ef       :<C-u>:echo expand("%:p")<cr>
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <Leader>fc       :<C-u>Clap colors<cr>
 nnoremap <silent> <leader>fr       :<C-u>Clap history<cr>
@@ -255,7 +263,7 @@ nnoremap          <leader>td       :<C-u>tabclose<cr>
 nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
 nnoremap          <leader>x        :<C-u>call ToggleExpensiveUIFeatures()<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
-nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p") <cr>
+nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p")<cr>
 tnoremap <Esc> <C-\><C-n>
 "}}}
 
