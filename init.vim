@@ -106,7 +106,7 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " {{{ Lightline
 let g:lightline = {
       \ 'active': {
-      \   'left': [['filename', 'fugitive', 'modified'], ['cocfunction', 'cocstatus']],
+      \   'left': [['fugitive', 'filename', 'modified'], ['cocfunction', 'cocstatus']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
       \ },
       \ 'inactive': {
