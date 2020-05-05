@@ -106,7 +106,7 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 " {{{ Lightline
 let g:lightline = {
       \ 'active': {
-      \   'left': [['fugitive', 'filename', 'modified'], ['cocfunction', 'cocstatus']],
+      \   'left': [['fugitive', 'filename', 'modified'], ['cocstatus']],
       \   'right': [[], ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype']]
       \ },
       \ 'inactive': {
@@ -115,17 +115,12 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'fugitive': 'FugitiveHead',
-      \   'cocstatus': 'LightLineCocStatus',
-      \   'cocfunction': 'LightLineCocCurrentFunction'
+      \   'cocstatus': 'LightLineCocStatus'
       \ }
       \ }
 
 function! LightLineCocStatus()
   return exists('*coc#status') ? coc#status() : ''
-endfunction
-
-function! LightLineCocCurrentFunction()
-    return get(b:, 'coc_current_function', '')
 endfunction
 " }}}
 " {{{ Neoformat
