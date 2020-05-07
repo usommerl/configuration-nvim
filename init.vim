@@ -52,6 +52,7 @@ Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
 Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdcommenter'
@@ -66,7 +67,7 @@ Plug 'kopischke/vim-fetch'
 Plug 'vifm/vifm.vim'
 Plug 'vim-scripts/bats.vim'
 Plug 'weirongxu/plantuml-previewer.vim'
-Plug 'tyru/open-browser.vim' " ^^^ dependency of plantuml-previewer
+Plug 'tyru/open-browser.vim' " ^^^ plantuml-previewer dependency
 Plug 'dstein64/vim-win'
 Plug 'Yggdroot/indentLine'
 call plug#end()
