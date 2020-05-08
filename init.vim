@@ -65,6 +65,8 @@ Plug 'kopischke/vim-stay'
 Plug 'kopischke/vim-fetch'
 Plug 'vifm/vifm.vim'
 Plug 'vim-scripts/bats.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim' " ^^^ dependency of plantuml-previewer
 Plug 'dstein64/vim-win'
 Plug 'Yggdroot/indentLine'
 call plug#end()
