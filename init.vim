@@ -51,7 +51,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
