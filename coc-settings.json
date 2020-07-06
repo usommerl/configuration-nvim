@@ -1,6 +1,5 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["scala"],
-  "metals.bloopVersion": "1.4.2",
   "metals.serverVersion": "0.9.1",
   "metals.statusBarEnabled": true,
   "python.jediEnabled": false,
