@@ -232,7 +232,7 @@ nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 
 if executable('vifm')
-  nnoremap <silent> <leader>e      :<C-u>vertical Vifm \| vertical resize 60 \|setlocal nonu nornu<cr>
+  nnoremap <silent> <leader>e      :<C-u>vertical Vifm \| vertical resize 60<cr>
 else
   nnoremap <silent> <leader>e      :<C-u>25Lexplore<cr>
 endif
