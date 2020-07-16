@@ -237,8 +237,6 @@ else
   nnoremap <silent> <leader>e      :<C-u>25Lexplore<cr>
 endif
 
-nnoremap          <leader>ed       :<C-u>:echo expand("%:p:h")<cr>
-nnoremap          <leader>ef       :<C-u>:echo expand("%:p")<cr>
 nnoremap <silent> <leader>fb       :<C-u>Clap buffers<cr>
 nnoremap <silent> <Leader>fc       :<C-u>Clap colors<cr>
 nnoremap <silent> <leader>fr       :<C-u>Clap history<cr>
