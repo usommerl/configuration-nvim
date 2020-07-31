@@ -55,7 +55,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter' }
+Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter prettydiff' }
 Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
@@ -70,6 +70,7 @@ Plug 'kopischke/vim-stay'
 Plug 'kopischke/vim-fetch'
 Plug 'vifm/vifm.vim'
 Plug 'vim-scripts/bats.vim'
+Plug 'Valloric/MatchTagAlways'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'tyru/open-browser.vim' " ^^^ plantuml-previewer dependency
 Plug 'dstein64/vim-win'
@@ -134,6 +135,7 @@ endfunction
 let g:neoformat_verbose = 0
 let g:neoformat_enabled_typescript = ['prettier', 'tsfmt']
 let g:neoformat_enabled_scss = ['prettier']
+let g:neoformat_verbose = 0
 " }}}
 " {{{ coc.vim
 
