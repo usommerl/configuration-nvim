@@ -94,7 +94,7 @@ endif
 " {{{ IndentLine
 let g:indentLine_char = '┊'
 let g:indentLine_noConcealCursor=1
-let g:indentLine_fileTypeExclude = ['text', 'help']
+let g:indentLine_fileTypeExclude = ['text', 'help', 'markdown']
 " }}}
 " {{{ Peekaboo
 let g:peekaboo_window = 'vertical botright 70new'
