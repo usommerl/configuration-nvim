@@ -185,11 +185,7 @@ nnoremap <silent>  <space>p  :<C-u>CocListResume<CR>
 " }}}
 
 " {{{ Settings
-if has('nvim-0.4')
-  set wildoptions=pum
-  set pumblend=15
-endif
-
+set pumblend=15
 set termguicolors
 set number
 set relativenumber
