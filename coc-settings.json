@@ -1,6 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["scala"],
-  "metals.serverVersion": "0.9.5",
+  "metals.serverVersion": "0.9.6",
   "metals.statusBarEnabled": true,
   "python.jediEnabled": false,
   "tsserver.log": "normal"
