@@ -44,6 +44,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'cohama/lexima.vim'
 Plug 'AndrewRadev/linediff.vim'
+Plug 'AndrewRadev/sideways.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/gv.vim'
@@ -216,6 +217,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap                  +        <C-a>
 nnoremap                  -        <C-x>
 nnoremap <silent> <C-l>            :<C-u>nohlsearch<cr><C-l>
+nnoremap          <m-h>            :SidewaysLeft<cr>
+nnoremap          <m-l>            :SidewaysRight<cr>
 nnoremap          <C-e>            6<C-e>
 nnoremap          <C-y>            6<C-y>
 nnoremap <silent> <C-M-L>          :<C-u>Neoformat<cr>
