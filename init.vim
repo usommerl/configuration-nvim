@@ -50,7 +50,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/suda.vim'
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
