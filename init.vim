@@ -57,7 +57,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-Plug 'sbdchd/neoformat', { 'do': 'yarn global add js-beautify prettier typescript-formatter prettydiff' }
 Plug 'scalameta/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
