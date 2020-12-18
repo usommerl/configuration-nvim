@@ -186,6 +186,7 @@ nnoremap <silent>  <space>p  :<C-u>CocListResume<CR>
 " }}}
 
 " {{{ Settings
+set title
 set pumblend=15
 set termguicolors
 set number
