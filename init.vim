@@ -47,6 +47,7 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'itchyny/vim-cursorword'
 Plug 'itchyny/lightline.vim'
+Plug 'josa42/coc-sh', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/suda.vim'
