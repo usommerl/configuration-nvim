@@ -51,7 +51,7 @@ Plug 'josa42/coc-sh', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/suda.vim'
-Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
+Plug 'liuchengxu/vim-clap', { 'tag': '*', 'do': { -> clap#installer#force_download() } }
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
