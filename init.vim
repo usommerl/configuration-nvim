@@ -83,6 +83,7 @@ call plug#end()
 let g:clap_disable_run_from_project_root = v:true
 let g:clap_layout = { 'relative': 'editor', 'width': '90%', 'col': '5%' }
 let g:clap_provider_grep_opts = '-H --no-heading --vimgrep --smart-case --hidden -g !.git*'
+let g:clap_use_pure_python = 1
 " }}}
 " {{{ vifm
 if executable('vifm')
