@@ -252,8 +252,8 @@ nnoremap <silent> <leader>fy       :<C-u>Clap yanks<cr>
 nnoremap          <leader>gd       :<C-u>Gdiff<cr>
 nnoremap          <leader>gg       :<C-u>Gstatus<cr>
 nnoremap          <leader>gc       :<C-u>Git commit -v<cr>
-nnoremap          <leader>gps      :<C-u>Gpush<cr>
-nnoremap          <leader>gpl      :<C-u>Gpull<cr>
+nnoremap          <leader>gps      :<C-u>Git push<cr>
+nnoremap          <leader>gpl      :<C-u>Git pull<cr>
 nnoremap          <leader>gb       :<C-u>Gblame<cr>
 nnoremap          <leader>gL       :<C-u>GV<cr>
 nnoremap          <leader>gl       :<C-u>GV!<cr>
