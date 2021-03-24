@@ -29,6 +29,7 @@ endfunction
 " {{{ Plugins
 call plug#begin('~/.config/nvim/plugged')
 " {{{ Colorschemes
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
@@ -293,9 +294,10 @@ augroup LightlineColorscheme
   autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
   autocmd ColorScheme one call LightlineColorscheme('one')
   autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
+  autocmd ColorScheme dracula call LightlineColorscheme('dracula')
 augroup END
 
-colorscheme material
+colorscheme dracula
 " Workaround for weird materila theme highlight
 exec 'hi MatchParen guifg=red guibg=none gui=none cterm=none'
 " }}}
