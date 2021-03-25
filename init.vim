@@ -289,15 +289,19 @@ augroup LightlineColorscheme
   autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
   autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
   autocmd ColorScheme material call LightlineColorscheme('material')
-  autocmd ColorScheme OceanicNext call LightlineColorscheme('materia')
-  autocmd ColorScheme PaperColor call LightlineColorscheme('PaperColor')
+  autocmd ColorScheme OceanicNext call LightlineColorscheme('material')
   autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
   autocmd ColorScheme one call LightlineColorscheme('one')
   autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
-  autocmd ColorScheme dracula call LightlineColorscheme('dracula')
+  autocmd ColorSchemePre dracula set bg=dark | call LightlineColorscheme('dracula')
+  autocmd ColorSchemePre pencil set bg=light | call LightlineColorscheme('Tomorrow')
+  autocmd ColorSchemePre PaperColor set bg=light | call LightlineColorscheme('PaperColor')
 augroup END
 
-colorscheme dracula
+if filereadable(expand("~/.vimrc_background"))
+  source ~/.vimrc_background
+endif
+
 " Workaround for weird materila theme highlight
 exec 'hi MatchParen guifg=red guibg=none gui=none cterm=none'
 " }}}
