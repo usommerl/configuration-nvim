@@ -88,7 +88,7 @@ let g:clap_use_pure_python = 1
 " }}}
 " {{{ vifm
 if executable('vifm')
-  let g:vifm_exec_args     = '-c "nnoremap ,e :q!<cr>" -c "set nols" -c "only" -c "set ruf= "'
+  let g:vifm_exec_args     = '-c "nnoremap q :q!<cr>" -c "nnoremap ,e :q!<cr>" -c "set nols" -c "only" -c "set ruf= "'
   let g:vifm_embed_split   = 1
   let g:vifm_replace_netrw = 1
   let g:loaded_netrw       = 1
@@ -237,7 +237,7 @@ nnoremap <silent> <Leader>dgr      :diffget REMOTE \| diffupdate<CR>
 nnoremap <silent> <Leader>dgb      :diffget BASE \| diffupdate<CR>
 
 if executable('vifm')
-  nnoremap <silent> <leader>e      :<C-u>vertical Vifm \| vertical resize 60<cr>
+  nnoremap <silent> <leader>e      :<C-u>vertical Vifm \| vertical resize 60 \|setlocal nonu nornu<cr>
 else
   nnoremap <silent> <leader>e      :<C-u>25Lexplore<cr>
 endif
@@ -274,7 +274,7 @@ tnoremap <Esc> <C-\><C-n>
 
 " {{{ Autocommands & Colorscheme
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
-au! BufEnter $MYVIMRC setlocal foldmethod=marker
+au! BufEnter $MYVIMRC,config.fish setlocal foldmethod=marker
 au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
 au! FileType help,qf nnoremap <buffer> <silent>q :bd<cr>
