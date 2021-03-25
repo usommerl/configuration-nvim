@@ -33,7 +33,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'jacoborus/tender'
 Plug 'junegunn/seoul256.vim'
-Plug 'kaicataldo/material.vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'noah/vim256-color'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'mhartington/oceanic-next'
