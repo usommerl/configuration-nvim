@@ -285,14 +285,14 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 
 augroup LightlineColorscheme
   autocmd!
-  autocmd ColorScheme nord call LightlineColorscheme('nord')
-  autocmd ColorScheme Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
-  autocmd ColorScheme Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
-  autocmd ColorScheme material call LightlineColorscheme('material')
-  autocmd ColorScheme OceanicNext call LightlineColorscheme('material')
-  autocmd ColorScheme seoul256 call LightlineColorscheme('seoul256')
-  autocmd ColorScheme one call LightlineColorscheme('one')
-  autocmd ColorScheme nightfly call LightlineColorscheme('nightfly')
+  autocmd ColorSchemePre nord call LightlineColorscheme('nord')
+  autocmd ColorSchemePre Tomorrow,bubblegum-256-light call LightlineColorscheme('Tomorrow')
+  autocmd ColorSchemePre Tomorrow-Night-Eighties,bubblegum-256-dark call LightlineColorscheme('Tomorrow_Night_Eighties')
+  autocmd ColorSchemePre OceanicNext call LightlineColorscheme('material')
+  autocmd ColorSchemePre seoul256 call LightlineColorscheme('seoul256')
+  autocmd ColorSchemePre one call LightlineColorscheme('one')
+  autocmd ColorSchemePre nightfly call LightlineColorscheme('nightfly')
+  autocmd ColorSchemePre material call LightlineColorscheme('material')
   autocmd ColorSchemePre dracula set bg=dark | call LightlineColorscheme('dracula')
   autocmd ColorSchemePre pencil set bg=light | call LightlineColorscheme('Tomorrow')
   autocmd ColorSchemePre PaperColor set bg=light | call LightlineColorscheme('PaperColor')
