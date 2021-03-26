@@ -275,6 +275,7 @@ tnoremap <Esc> <C-\><C-n>
 " {{{ Autocommands & Colorscheme
 au! BufWritePost $MYVIMRC nested source $MYVIMRC
 au! BufEnter $MYVIMRC,config.fish setlocal foldmethod=marker
+au BufEnter * let &titlestring = "nvim " . expand("%:p")
 au Filetype ruby setlocal re=1
 au! VimResized * :wincmd =
 au! FileType help,qf nnoremap <buffer> <silent>q :bd<cr>
