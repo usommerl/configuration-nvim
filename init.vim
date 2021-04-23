@@ -268,7 +268,8 @@ nnoremap          <leader>td       :<C-u>tabclose<cr>
 nnoremap          <leader>u        :<C-u>:UndotreeToggle<cr>
 nnoremap          <leader>x        :<C-u>call ToggleExpensiveUIFeatures()<cr>
 nnoremap <silent> <leader>yd       :<C-u>let @+ = expand("%:p:h")<cr>
-nnoremap <silent> <leader>yf       :<C-u>let @+ = expand("%:p")<cr>
+nnoremap <silent> <leader>yff      :<C-u>let @+ = expand("%:p")<cr>
+nnoremap <silent> <leader>yfn      :<C-u>let @+ = expand("%:p") . ':' . line(".")<CR>
 tnoremap <Esc> <C-\><C-n>
 "}}}
 
