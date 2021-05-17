@@ -56,7 +56,6 @@ Plug 'liuchengxu/vim-clap', { 'tag': '*', 'do': { -> clap#installer#force_downlo
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-python', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
 Plug 'scalameta/coc-metals', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
