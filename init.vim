@@ -53,7 +53,7 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align'
 Plug 'lambdalisue/suda.vim'
-Plug 'liuchengxu/vim-clap', { 'tag': '*', 'do': { -> clap#installer#force_download() } }
+Plug 'liuchengxu/vim-clap', { 'tag': '*', 'do': { -> ':Clap install-binary!' } }
 Plug 'machakann/vim-highlightedyank'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
