@@ -51,6 +51,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'josa42/coc-sh', {'tag': '*', 'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-easy-align'
 Plug 'lambdalisue/suda.vim'
 Plug 'liuchengxu/vim-clap', { 'tag': '*', 'do': { -> clap#installer#force_download() } }
 Plug 'machakann/vim-highlightedyank'
