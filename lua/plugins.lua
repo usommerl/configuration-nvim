@@ -14,6 +14,8 @@ vim.cmd [[
 ]]
 
 return require('packer').startup(function(use)
+  use { 'AndrewRadev/linediff.vim' }
+  use { 'AndrewRadev/sideways.vim' }
   use { 'wbthomason/packer.nvim' }
   use { 'lewis6991/impatient.nvim' }
   use { 'nvim-telescope/telescope.nvim',

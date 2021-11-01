@@ -11,6 +11,8 @@ map('n', '-'                , '<c-x>'                                           
 map('n', '<c-l>'            , ':<c-u>nohlsearch<cr><c-l>'                         , nrs)
 map('n', '<c-e>'            , '6<c-e>'                                            , nor)
 map('n', '<c-y>'            , '6<c-y>'                                            , nor)
+map('n', '<m-h>'            , ':SidewaysLeft<cr>'                                 , nor)
+map('n', '<m-l>'            , ':SidewaysRight<cr>'                                , nor)
 map('n', '<leader>.'        , ':b#<cr>'                                           , nor)
 map('n', '<leader>fb'       , ':Telescope buffers<cr>'                            , nrs)
 map('n', '<leader>fc'       , ':Telescope colorscheme<cr>'                        , nrs)
