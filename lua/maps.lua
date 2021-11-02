@@ -19,6 +19,7 @@ map('n', '<leader>fc'       , ':Telescope colorscheme<cr>'                      
 map('n', '<leader>ff'       , ':Telescope find_files<cr>'                         , nrs)
 map('n', '<leader>fg'       , ':Telescope live_grep<cr>'                          , nrs)
 map('n', '<leader>fk'       , ':Telescope keymaps<cr>'                            , nrs)
+map('n', '<leader>fz'       , ':Telescope zoxide list<cr>'                        , nrs)
 map('n', '<leader>r<space>' , ':<c-u>%s/\\s\\+$/<cr>'                             , nor)
 map('n', '<leader>sl'       , ':<c-u>setlocal list!<cr>'                          , nor)
 map('n', '<leader>sw'       , ':<c-u>set wrap!<cr>'                               , nor)

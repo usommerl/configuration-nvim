@@ -21,3 +21,8 @@ telescope.setup {
 }
 
 telescope.load_extension('fzf')
+
+telescope.load_extension('zoxide')
+require('telescope._extensions.zoxide.config').setup({
+  list_command = 'zoxide query -l --all'
+})
