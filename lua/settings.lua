@@ -6,6 +6,7 @@ opt.clipboard = 'unnamedplus'
 opt.cmdheight = 2
 opt.cursorline = true
 opt.expandtab = true
+opt.hidden = true
 opt.inccommand = 'nosplit'
 opt.lazyredraw = true
 opt.list = true
