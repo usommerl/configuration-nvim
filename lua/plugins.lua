@@ -14,9 +14,9 @@ vim.cmd [[
 ]]
 
 return require('packer').startup(function(use)
+  use { 'wbthomason/packer.nvim' }
   use { 'AndrewRadev/linediff.vim' }
   use { 'AndrewRadev/sideways.vim' }
-  use { 'wbthomason/packer.nvim' }
   use { 'lewis6991/impatient.nvim' }
   use {
     'lukas-reineke/indent-blankline.nvim',
@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim'
     },
     tag = 'release',
-    config = function() require('gitsigns').setup() end
+    config = require('gitsigns').setup()
   }
   use {
     'nvim-telescope/telescope.nvim',
@@ -38,7 +38,12 @@ return require('packer').startup(function(use)
       { 'jvgrootveld/telescope-zoxide' }
     },
     cmd = 'Telescope',
-    config = function() require('config/telescope') end
+    config = require('config/telescope')
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = require('config/lualine')
   }
 
   -- colorschemes
