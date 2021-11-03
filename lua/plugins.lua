@@ -19,6 +19,10 @@ return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
   use { 'lewis6991/impatient.nvim' }
   use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = require('config/indent-blankline')
+  }
+  use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'

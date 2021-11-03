@@ -4,6 +4,7 @@ local indent = 2
 opt.backup = false
 opt.clipboard = 'unnamedplus'
 opt.cmdheight = 2
+opt.colorcolumn = '9999' -- See: https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
 opt.cursorline = true
 opt.expandtab = true
 opt.hidden = true
