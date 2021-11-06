@@ -21,6 +21,10 @@ return require('packer').startup(function(use)
   }
   use { 'AndrewRadev/sideways.vim' }
   use { 'lewis6991/impatient.nvim' }
+  use {
+    'nathom/filetype.nvim',
+    config = require('config/filetype')
+  }
   use { 'dstein64/vim-startuptime' }
   use {
     'lukas-reineke/indent-blankline.nvim',
