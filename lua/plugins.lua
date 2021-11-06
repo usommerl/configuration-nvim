@@ -15,7 +15,10 @@ vim.cmd [[
 
 return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
-  use { 'AndrewRadev/linediff.vim' }
+  use {
+    'AndrewRadev/linediff.vim',
+    cmd = 'Linediff'
+  }
   use { 'AndrewRadev/sideways.vim' }
   use { 'lewis6991/impatient.nvim' }
   use {
