@@ -58,7 +58,6 @@ return require('packer').startup(function(use)
   }
 
   -- colorschemes
-  use { 'NLKNguyen/papercolor-theme' }
   use { 'arcticicestudio/nord-vim' }
   use { 'bluz71/vim-nightfly-guicolors' }
   use { 'cocopon/iceberg.vim' }
