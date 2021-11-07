@@ -69,6 +69,7 @@ return require('packer').startup(function(use)
   use { 'rmehri01/onenord.nvim', branch = 'main' }
   use { 'kaicataldo/material.vim', branch = 'main' }
   use { 'baskerville/bubblegum' }
+  use { 'sainnhe/edge' }
 
   if packer_bootstrap then
     require('packer').sync()
