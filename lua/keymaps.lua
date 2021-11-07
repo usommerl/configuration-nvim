@@ -14,6 +14,7 @@ map('n', '<c-y>'            , '6<c-y>'                                          
 map('n', '<m-h>'            , ':SidewaysLeft<cr>'                                 , nor)
 map('n', '<m-l>'            , ':SidewaysRight<cr>'                                , nor)
 map('n', '<leader>.'        , ':b#<cr>'                                           , nor)
+map('n', '<leader>e'        , ':NvimTreeToggle<cr>'                               , nrs)
 map('n', '<leader>fb'       , ':Telescope buffers<cr>'                            , nrs)
 map('n', '<leader>fc'       , ':Telescope colorscheme<cr>'                        , nrs)
 map('n', '<leader>ff'       , ':Telescope find_files<cr>'                         , nrs)

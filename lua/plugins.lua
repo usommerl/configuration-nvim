@@ -14,14 +14,19 @@ vim.cmd [[
 ]]
 
 return require('packer').startup(function(use)
- use { 'wbthomason/packer.nvim' }
- use { 'lewis6991/impatient.nvim' }
- use { 'dstein64/vim-startuptime' }
- use {
-   'AndrewRadev/sideways.vim',
-   cmd = { 'SidewaysLeft', 'SidewaysRight'}
- }
- use {
+  use { 'wbthomason/packer.nvim' }
+  use { 'lewis6991/impatient.nvim' }
+  use { 'dstein64/vim-startuptime' }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = require('config/nvim-tree')
+  }
+  use {
+    'AndrewRadev/sideways.vim',
+    cmd = { 'SidewaysLeft', 'SidewaysRight'}
+  }
+  use {
     'AndrewRadev/linediff.vim',
     cmd = 'Linediff'
   }
