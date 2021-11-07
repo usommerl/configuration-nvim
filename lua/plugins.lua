@@ -60,7 +60,6 @@ return require('packer').startup(function(use)
   -- colorschemes
   use { 'dracula/vim' }
   use { 'mhartington/oceanic-next' }
-  use { 'noah/vim256-color' }
   use { 'rakr/vim-one' }
   use { 'rmehri01/onenord.nvim', branch = 'main' }
   use { 'kaicataldo/material.vim', branch = 'main' }
