@@ -59,7 +59,6 @@ return require('packer').startup(function(use)
 
   -- colorschemes
   use { 'arcticicestudio/nord-vim' }
-  use { 'cocopon/iceberg.vim' }
   use { 'dracula/vim' }
   use { 'jacoborus/tender' }
   use { 'junegunn/seoul256.vim' }
