@@ -58,7 +58,6 @@ return require('packer').startup(function(use)
   }
 
   -- colorschemes
-  use { 'arcticicestudio/nord-vim' }
   use { 'dracula/vim' }
   use { 'mhartington/oceanic-next' }
   use { 'noah/vim256-color' }
