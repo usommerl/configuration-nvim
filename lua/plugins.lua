@@ -6,12 +6,12 @@ end
 
 vim.cmd [[packadd packer.nvim]]
 
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]]
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+--   augroup end
+-- ]]
 
 return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = require('config/nvim-tree')
+    config = function() require('conf/nvim-tree') end
   }
   use {
     'AndrewRadev/sideways.vim',
@@ -32,11 +32,11 @@ return require('packer').startup(function(use)
   }
   use {
     'nathom/filetype.nvim',
-    config = require('config/filetype')
+    config = function() require('conf/filetype') end
   }
   use {
     'lukas-reineke/indent-blankline.nvim',
-    config = require('config/indent-blankline')
+    config = function() require('conf/indent-blankline') end
   }
   use {
     'lewis6991/gitsigns.nvim',
@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim'
     },
     tag = 'release',
-    config = require('gitsigns').setup()
+    config = function() require('gitsigns').setup() end
   }
   use {
     'nvim-telescope/telescope.nvim',
@@ -54,12 +54,12 @@ return require('packer').startup(function(use)
       { 'jvgrootveld/telescope-zoxide' }
     },
     cmd = 'Telescope',
-    config = require('config/telescope')
+    config = function() require('conf/telescope') end
   }
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = require('config/lualine')
+    config = function() require('conf/lualine') end
   }
 
   -- colorschemes
