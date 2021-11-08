@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require('conf/nvim-tree') end
+    config = function() require('config/nvim-tree') end
   }
   use {
     'AndrewRadev/sideways.vim',
@@ -32,11 +32,11 @@ return require('packer').startup(function(use)
   }
   use {
     'nathom/filetype.nvim',
-    config = function() require('conf/filetype') end
+    config = function() require('config/filetype') end
   }
   use {
     'lukas-reineke/indent-blankline.nvim',
-    config = function() require('conf/indent-blankline') end
+    config = function() require('config/indent-blankline') end
   }
   use {
     'lewis6991/gitsigns.nvim',
@@ -54,12 +54,12 @@ return require('packer').startup(function(use)
       { 'jvgrootveld/telescope-zoxide' }
     },
     cmd = 'Telescope',
-    config = function() require('conf/telescope') end
+    config = function() require('config/telescope') end
   }
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = function() require('conf/lualine') end
+    config = function() require('config/lualine') end
   }
 
   -- colorschemes
