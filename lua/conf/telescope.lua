@@ -16,7 +16,11 @@ telescope.setup {
     buffers = {
       sort_lastused = true,
       previewer = false,
-    },
+      mappings = {
+        i = { ['<c-x>'] = require('telescope.actions').delete_buffer },
+        n = { ['<c-x>'] = require('telescope.actions').delete_buffer }
+      }
+    }
   }
 }
 
