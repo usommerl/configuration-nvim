@@ -35,6 +35,10 @@ return require('packer').startup(function(use)
     config = function() require('config/filetype') end
   }
   use {
+    'numToStr/Comment.nvim',
+    config = function() require('Comment').setup() end
+  }
+  use {
     'lukas-reineke/indent-blankline.nvim',
     config = function() require('config/indent-blankline') end
   }
