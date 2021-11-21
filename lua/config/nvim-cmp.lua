@@ -14,6 +14,7 @@ cmp.setup {
   mapping = {
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<cr>'] = cmp.mapping.confirm({ select = true }),
   },
   formatting = {
     format = lspkind.cmp_format({maxwidth = 60})
