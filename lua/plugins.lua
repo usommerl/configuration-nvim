@@ -39,6 +39,29 @@ return require('packer').startup(function(use)
     config = function() require('Comment').setup() end
   }
   use {
+    'scalameta/nvim-metals',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  use {
+    'folke/trouble.nvim',
+    requires = {
+      { 'kyazdani42/nvim-web-devicons' },
+      { 'folke/lsp-colors.nvim' },
+    },
+    cmd = 'TroubleToggle',
+    config = function() require('trouble').setup() end
+  }
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'onsails/lspkind-nvim'},
+    },
+    config = function() require('config/nvim-cmp') end
+  }
+  use {
     'lukas-reineke/indent-blankline.nvim',
     config = function() require('config/indent-blankline') end
   }
