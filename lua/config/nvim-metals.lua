@@ -6,6 +6,8 @@ metals_config.settings = {
   showImplicitArguments = true,
 }
 
+cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+
 cmd([[augroup lsp]])
 cmd([[autocmd!]])
 cmd([[autocmd FileType scala setlocal omnifunc=v:lua.vim.lsp.omnifunc]])
