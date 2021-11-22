@@ -19,5 +19,8 @@ nvim_tree.setup {
         { key = 'h',           cb = tree_cb('parent_node') },
       }
     }
+  },
+  filters = {
+    dotfiles = true,
   }
 }
