@@ -23,6 +23,7 @@ map('n', '<leader>fc'       , ':Telescope colorscheme<cr>'                      
 map('n', '<leader>ff'       , ':Telescope find_files<cr>'                         , nrs)
 map('n', '<leader>fg'       , ':Telescope live_grep<cr>'                          , nrs)
 map('n', '<leader>fk'       , ':Telescope keymaps<cr>'                            , nrs)
+map('n', '<leader>fm'       , ':Telescope metals commands<cr>'                    , nrs)
 map('n', '<leader>fz'       , ':Telescope zoxide list<cr>'                        , nrs)
 map('n', '<leader>r<space>' , ':<c-u>%s/\\s\\+$/<cr>'                             , nor)
 map('n', '<leader>re'       , ':lua vim.lsp.buf.rename()<cr>'                     , nrs)
