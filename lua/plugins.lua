@@ -12,7 +12,8 @@ return require('packer').startup(function(use)
   use { 'dstein64/vim-startuptime' }
   use {
     'airblade/vim-rooter',
-    event = "VimEnter"
+    event = "VimEnter",
+    config = function() require('config/vim-rooter') end
   }
   use {
     'kyazdani42/nvim-tree.lua',
