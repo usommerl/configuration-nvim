@@ -18,6 +18,8 @@ map('n', '<m-l>'            , ':SidewaysRight<cr>'                              
 map('n', '<leader>.'        , ':b#<cr>'                                           , nor)
 map('n', '<leader>ca'       , ':lua vim.lsp.buf.code_action()<cr>'                , nrs)
 map('n', '<leader>dw'       , ':lua diff_toggle()<cr>'                            , nrs)
+map('n', '<leader>dl'       , ':Linediff<cr>'                                     , nrs)
+map('v', '<leader>dl'       , ':Linediff<cr>'                                     , nrs)
 map('n', '<leader>e'        , ':NvimTreeToggle<cr>'                               , nrs)
 map('n', '<leader>fb'       , ':Telescope buffers<cr>'                            , nrs)
 map('n', '<leader>fc'       , ':Telescope colorscheme<cr>'                        , nrs)
