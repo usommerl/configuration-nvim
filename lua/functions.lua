@@ -9,3 +9,11 @@ function read_if_exists_and_then(filename, f)
   end
 end
 
+function diff_toggle()
+  if vim.api.nvim_win_get_option(0, 'diff') then
+    vim.cmd('windo diffoff')
+  else
+    vim.cmd('windo diffthis')
+  end
+end
+
