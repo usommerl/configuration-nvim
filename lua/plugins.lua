@@ -11,6 +11,10 @@ return require('packer').startup(function(use)
   use { 'lewis6991/impatient.nvim' }
   use { 'dstein64/vim-startuptime' }
   use {
+    'airblade/vim-rooter',
+    event = "VimEnter"
+  }
+  use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require('config/nvim-tree') end
