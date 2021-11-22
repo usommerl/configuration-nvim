@@ -17,7 +17,7 @@ opt.number = true
 opt.pumblend = 15
 opt.relativenumber = true
 opt.shiftwidth = indent
-opt.shortmess:remove("F"):append("c")
+opt.shortmess:append("c")
 opt.showmode = false
 opt.signcolumn = 'yes:2'
 opt.softtabstop = indent
