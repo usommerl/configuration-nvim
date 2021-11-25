@@ -11,6 +11,10 @@ return require('packer').startup(function(use)
   use { 'lewis6991/impatient.nvim' }
   use { 'dstein64/vim-startuptime' }
   use {
+    'dstein64/vim-win',
+    cmd = 'Win'
+  }
+  use {
     'airblade/vim-rooter',
     event = "VimEnter",
     config = function() require('config/vim-rooter') end
