@@ -8,7 +8,6 @@ opt.colorcolumn = '9999' -- See: https://github.com/lukas-reineke/indent-blankli
 opt.completeopt = { 'menu', 'noinsert', 'noselect' }
 opt.cursorline = true
 opt.expandtab = true
-opt.hidden = true
 opt.inccommand = 'nosplit'
 opt.lazyredraw = true
 opt.list = true
