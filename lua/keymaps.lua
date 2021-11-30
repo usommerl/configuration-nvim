@@ -10,7 +10,6 @@ map('n', '+'                , '<c-a>'                                           
 map('n', '-'                , '<c-x>'                                             , nor)
 map('n', 'gd'               , ':lua vim.lsp.buf.definition()<cr>'                 , nrs)
 map('n', 'K'                , ':lua vim.lsp.buf.hover()<cr>'                      , nrs)
-map('n', '<c-l>'            , ':<c-u>nohlsearch<cr><c-l>'                         , nrs)
 map('n', '<c-e>'            , '6<c-e>'                                            , nor)
 map('n', '<c-y>'            , '6<c-y>'                                            , nor)
 map('n', '<m-h>'            , ':SidewaysLeft<cr>'                                 , nor)
