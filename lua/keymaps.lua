@@ -16,7 +16,7 @@ map('n', '<c-y>'            , '6<c-y>'                                          
 map('n', '<m-h>'            , ':SidewaysLeft<cr>'                                 , nor)
 map('n', '<m-l>'            , ':SidewaysRight<cr>'                                , nor)
 map('n', '<leader>.'        , ':b#<cr>'                                           , nor)
-map('n', '<leader>ca'       , ':lua vim.lsp.buf.code_action()<cr>'                , nrs)
+map('n', '<leader>,'        , ':lua vim.lsp.buf.code_action()<cr>'                , nrs)
 map('n', '<leader>dw'       , ':lua diff_toggle()<cr>'                            , nrs)
 map('n', '<leader>dl'       , ':Linediff<cr>'                                     , nrs)
 map('v', '<leader>dl'       , ':Linediff<cr>'                                     , nrs)
