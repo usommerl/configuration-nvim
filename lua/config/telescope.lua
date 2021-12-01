@@ -14,7 +14,7 @@ telescope.setup {
   pickers = {
     colorscheme = { theme = 'dropdown' },
     buffers = {
-      sort_lastused = true,
+      sort_mru = true,
       previewer = false,
       mappings = {
         i = { ['<c-x>'] = require('telescope.actions').delete_buffer },
