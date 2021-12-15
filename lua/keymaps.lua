@@ -39,3 +39,4 @@ map('n', '<leader>xx'       , ':TroubleToggle<cr>'                              
 map('n', '<leader>yd'       , ':<c-u>let @+ = expand("%:p:h")<cr>'                , nor)
 map('n', '<leader>yff'      , ':<c-u>let @+ = expand("%:p")<cr>'                  , nor)
 map('n', '<leader>yfn'      , ':<c-u>let @+ = expand("%:p") . ":" . line(".")<cr>', nor)
+map('t', '<Esc>'            , '<C-\\><C-n>'                                       , nor)
