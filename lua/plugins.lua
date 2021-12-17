@@ -94,14 +94,13 @@ return require('packer').startup(function(use)
   }
 
   -- colorschemes
-  use { 'dracula/vim' }
   use { 'mhartington/oceanic-next' }
   use { 'rakr/vim-one' }
   use { 'rmehri01/onenord.nvim', branch = 'main' }
   use { 'kaicataldo/material.vim', branch = 'main' }
-  use { 'baskerville/bubblegum' }
   use { 'sainnhe/edge' }
   use { 'projekt0n/github-nvim-theme' }
+  use { 'EdenEast/nightfox.nvim' }
 
   if packer_bootstrap then
     require('packer').sync()
