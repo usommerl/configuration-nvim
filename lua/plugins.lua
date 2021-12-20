@@ -101,6 +101,7 @@ return require('packer').startup(function(use)
   use { 'kaicataldo/material.vim', branch = 'main' }
   use { 'baskerville/bubblegum' }
   use { 'sainnhe/edge' }
+  use { 'projekt0n/github-nvim-theme' }
 
   if packer_bootstrap then
     require('packer').sync()
