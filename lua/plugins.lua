@@ -101,6 +101,7 @@ return require('packer').startup(function(use)
   use { 'sainnhe/edge' }
   use { 'projekt0n/github-nvim-theme' }
   use { 'EdenEast/nightfox.nvim' }
+  use { 'rebelot/kanagawa.nvim' }
 
   if packer_bootstrap then
     require('packer').sync()
