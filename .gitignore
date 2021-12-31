@@ -2,3 +2,4 @@
 plugged/
 autoload/
 .init.vim-rplugin~
+plugin/packer_compiled.lua
