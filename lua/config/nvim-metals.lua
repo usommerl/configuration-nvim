@@ -6,7 +6,7 @@ metals_config.settings = {
   showImplicitArguments = true,
 }
 
-cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float({focusable=false})]]
 
 cmd([[augroup lsp]])
 cmd([[autocmd!]])
