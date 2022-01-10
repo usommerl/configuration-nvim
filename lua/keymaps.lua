@@ -35,6 +35,7 @@ map('n', '<leader>sl'       , ':<c-u>setlocal list!<cr>'                        
 map('n', '<leader>sw'       , ':<c-u>set wrap!<cr>'                               , nor)
 map('n', '<leader>tn'       , ':<c-u>tabnew<cr>'                                  , nor)
 map('n', '<leader>td'       , ':<c-u>tabclose<cr>'                                , nor)
+map('n', '<leader>w'        , ':<c-u>Win<cr>'                                     , nrs)
 map('n', '<leader>xx'       , ':TroubleToggle<cr>'                                , nrs)
 map('n', '<leader>yd'       , ':<c-u>let @+ = expand("%:p:h")<cr>'                , nor)
 map('n', '<leader>yff'      , ':<c-u>let @+ = expand("%:p")<cr>'                  , nor)
