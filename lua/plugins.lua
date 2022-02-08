@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
   use { 'lewis6991/impatient.nvim' }
   use { 'dstein64/vim-startuptime' }
+  use { 'tversteeg/registers.nvim' }
   use {
     'dstein64/vim-win',
     cmd = 'Win'
