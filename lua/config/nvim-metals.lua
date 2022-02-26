@@ -14,11 +14,6 @@ cmd([[autocmd FileType scala setlocal omnifunc=v:lua.vim.lsp.omnifunc]])
 cmd([[autocmd FileType scala,sbt lua require('metals').initialize_or_attach(metals_config)]])
 cmd([[augroup end]])
 
-cmd([[augroup fmt]])
-cmd([[autocmd!]])
-cmd([[autocmd BufWritePre *.scala lua vim.lsp.buf.formatting_sync()]])
-cmd([[augroup end]])
-
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
