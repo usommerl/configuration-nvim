@@ -3,15 +3,14 @@ if not present then
     return
 end
 
-vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_respect_buf_cwd = 1
 
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
 nvim_tree.setup {
+  hijack_cursor = true,
   view = {
     width = 60,
-    hijack_cursor = true,
     mappings = {
       list = {
         { key = {'l', '<cr>'}, cb = tree_cb('edit') },
@@ -22,5 +21,10 @@ nvim_tree.setup {
   },
   filters = {
     dotfiles = true,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
   }
 }
