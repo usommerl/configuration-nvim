@@ -3,12 +3,11 @@ if not present then
     return
 end
 
-vim.g.nvim_tree_respect_buf_cwd = 1
-
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
 nvim_tree.setup {
   hijack_cursor = true,
+  respect_buf_cwd = true,
   view = {
     width = 60,
     mappings = {
