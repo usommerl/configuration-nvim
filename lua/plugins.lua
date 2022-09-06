@@ -1,7 +1,8 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+    install_path })
 end
 
 vim.cmd [[packadd packer.nvim]]
@@ -31,7 +32,7 @@ return require('packer').startup(function(use)
   }
   use {
     'AndrewRadev/sideways.vim',
-    cmd = { 'SidewaysLeft', 'SidewaysRight'}
+    cmd = { 'SidewaysLeft', 'SidewaysRight' }
   }
   use {
     'AndrewRadev/linediff.vim',
@@ -64,7 +65,7 @@ return require('packer').startup(function(use)
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
-      { 'onsails/lspkind-nvim'},
+      { 'onsails/lspkind-nvim' },
     },
     config = function() require('config/nvim-cmp') end
   }
@@ -82,6 +83,7 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-telescope/telescope.nvim',
+    tag = '0.1.0',
     requires = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
@@ -94,7 +96,7 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function() require('config/lualine') end
   }
 
