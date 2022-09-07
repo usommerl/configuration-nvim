@@ -2,7 +2,7 @@ local cmd = vim.cmd
 
 cmd([[augroup fmt]])
 cmd([[autocmd!]])
-cmd([[autocmd BufWritePre *.scala,*.lua,*.rs lua vim.lsp.buf.formatting_sync()]])
+cmd([[autocmd BufWritePre *.scala,*.lua,*.rs,*.json lua vim.lsp.buf.formatting_sync()]])
 cmd([[augroup end]])
 
 local present, lspconfig = pcall(require, 'lspconfig')
@@ -17,7 +17,7 @@ if present then
   }
 end
 
-local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'sumneko_lua' }
+local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'sumneko_lua', 'jsonls' }
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
