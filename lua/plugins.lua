@@ -99,6 +99,10 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function() require('config/lualine') end
   }
+  use {
+    'simrat39/symbols-outline.nvim',
+    config = function() require("symbols-outline").setup() end
+  }
 
   -- colorschemes
   use { 'mhartington/oceanic-next' }
