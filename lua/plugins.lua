@@ -39,10 +39,6 @@ return require('packer').startup(function(use)
     cmd = 'Linediff'
   }
   use {
-    'nathom/filetype.nvim',
-    config = function() require('config/filetype') end
-  }
-  use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
   }
