@@ -2,7 +2,7 @@ local cmd = vim.cmd
 
 cmd([[augroup fmt]])
 cmd([[autocmd!]])
-cmd([[autocmd BufWritePre *.scala,*.lua,*.rs,*.json lua vim.lsp.buf.formatting_sync()]])
+cmd([[autocmd BufWritePre *.scala,*.lua,*.rs,*.json lua vim.lsp.buf.format()]])
 cmd([[augroup end]])
 
 local present, lspconfig = pcall(require, 'lspconfig')
