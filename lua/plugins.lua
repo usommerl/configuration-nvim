@@ -59,6 +59,15 @@ return require('packer').startup(function(use)
     config = function() require('trouble').setup() end
   }
   use {
+    "folke/noice.nvim",
+    event = "VimEnter",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    config = function() require("noice").setup() end
+  }
+  use {
     'hrsh7th/nvim-cmp',
     requires = {
       { 'hrsh7th/cmp-nvim-lsp' },
