@@ -65,7 +65,6 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     },
-    commit = 'b2b81e3ed69da46ff9074bba27c3fedfb24f2c9b',
     config = function() require("noice").setup() end
   }
   use {
