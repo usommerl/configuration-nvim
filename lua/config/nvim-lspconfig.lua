@@ -17,7 +17,7 @@ if present then
   }
 end
 
-local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'sumneko_lua', 'jsonls', 'angularls' }
+local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'sumneko_lua', 'jsonls', 'angularls', 'rnix' }
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
