@@ -104,6 +104,11 @@ return require('packer').startup(function(use)
     config = function() require('config/telescope') end
   }
   use {
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function() require("nvim-surround").setup() end
+  }
+  use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function() require('config/lualine') end
