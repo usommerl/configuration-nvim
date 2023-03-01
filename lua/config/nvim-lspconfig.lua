@@ -6,18 +6,17 @@ cmd([[autocmd BufWritePre *.scala,*.lua,*.rs,*.json lua vim.lsp.buf.format()]])
 cmd([[augroup end]])
 
 local present, lspconfig = pcall(require, 'lspconfig')
-if not present then
+if present then
+  require("mason").setup()
+  require("mason-lspconfig").setup({
+    automatic_installation = true,
+  })
+else
   return
 end
 
-local present, lspinstaller = pcall(require, 'nvim-lsp-installer')
-if present then
-  lspinstaller.setup {
-    automatic_installation = true,
-  }
-end
 
-local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'jsonls', 'angularls', 'rnix',
+local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'lua_ls', 'jsonls', 'angularls', 'rnix',
   'yamlls' }
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
