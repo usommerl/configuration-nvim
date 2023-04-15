@@ -17,9 +17,9 @@ return require('packer').startup(function(use)
     config = function() require("registers").setup() end,
   }
   use {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   }
   use {
     'dstein64/vim-win',
