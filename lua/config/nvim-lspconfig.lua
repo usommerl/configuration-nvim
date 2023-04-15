@@ -17,7 +17,7 @@ end
 
 
 local servers = { 'rust_analyzer', 'tsserver', 'pyright', 'marksman', 'lua_ls', 'jsonls', 'angularls', 'rnix',
-  'yamlls' }
+  'yamlls', 'dartls' }
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
