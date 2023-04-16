@@ -11,6 +11,14 @@ map('n', '<C-j>', '<C-w>j', nor)
 map('n', '<C-k>', '<C-w>k', nor)
 map('n', '<C-l>', '<C-w>l', nor)
 
+-- Move Lines
+map("n", "<A-j>", "<cmd>m .+1<cr>==", nor)
+map("n", "<A-k>", "<cmd>m .-2<cr>==", nor)
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", nor)
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", nor)
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", nor)
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", nor)
+
 map('c', '%%', 'getcmdtype() == ":" ? expand("%:h")."/" : "%%"', nre)
 map('n', '+', '<c-a>', nor)
 map('n', '-', '<c-x>', nor)
