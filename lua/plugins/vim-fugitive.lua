@@ -1,6 +1,6 @@
 return {
   {
     'tpope/vim-fugitive',
-    version = '*'
+    version = '^3'
   }
 }
