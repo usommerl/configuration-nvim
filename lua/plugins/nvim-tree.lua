@@ -1,7 +1,7 @@
 return {
   {
     'kyazdani42/nvim-tree.lua',
-    dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true },
+    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
     config = function()
       local tree_cb = require('nvim-tree.config').nvim_tree_callback
       require('nvim-tree').setup {
