@@ -1,7 +1,7 @@
 return {
   {
     'kyazdani42/nvim-tree.lua',
-    dependencies = 'kyazdani42/nvim-web-devicons',
+    dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true },
     config = function()
       local tree_cb = require('nvim-tree.config').nvim_tree_callback
       require('nvim-tree').setup {
@@ -11,9 +11,9 @@ return {
           width = 60,
           mappings = {
             list = {
-              { key = {'l', '<cr>'}, cb = tree_cb('edit') },
-              { key = 'w',           cb = tree_cb('preview') },
-              { key = 'h',           cb = tree_cb('parent_node') },
+              { key = { 'l', '<cr>' }, cb = tree_cb('edit') },
+              { key = { 'w' },         cb = tree_cb('preview') },
+              { key = { 'h' },         cb = tree_cb('parent_node') },
             }
           }
         },
