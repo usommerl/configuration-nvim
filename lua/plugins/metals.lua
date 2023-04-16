@@ -6,11 +6,11 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
-
       metals_config = require('metals').bare_config()
       metals_config.init_options.statusBarProvider = 'on'
       metals_config.settings = {
         showImplicitArguments = true,
+        showInferredType = true,
       }
 
       local cmd = vim.cmd
@@ -23,8 +23,8 @@ return {
 
       local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
       for type, icon in pairs(signs) do
-          local hl = "DiagnosticSign" .. type
-          vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+        local hl = "DiagnosticSign" .. type
+        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
       end
 
       vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
