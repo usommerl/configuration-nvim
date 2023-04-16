@@ -19,6 +19,14 @@ map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", nor)
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", nor)
 map("v", "<A-k>", ":m '<-2<cr>gv=gv", nor)
 
+-- Git
+map('n', '<leader>gd', ':<C-u>Gdiffsplit<cr>', nrs)
+map('n', '<leader>gg', ':<C-u>Git<cr>', nrs)
+map('n', '<leader>gc', ':<C-u>Git commit -v<cr>', nrs)
+map('n', '<leader>gps', ':<C-u>Git push<cr>', nrs)
+map('n', '<leader>gpl', ':<C-u>Git pull<cr>', nrs)
+map('n', '<leader>gb', ':<C-u>Git blame<cr>', nrs)
+
 map('c', '%%', 'getcmdtype() == ":" ? expand("%:h")."/" : "%%"', nre)
 map('n', '+', '<c-a>', nor)
 map('n', '-', '<c-x>', nor)
