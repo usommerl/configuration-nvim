@@ -5,6 +5,12 @@ local nre = { noremap = true, expr = true }
 
 vim.g.mapleader = ','
 
+-- Move to windows
+map('n', '<C-h>', '<C-w>h', nor)
+map('n', '<C-j>', '<C-w>j', nor)
+map('n', '<C-k>', '<C-w>k', nor)
+map('n', '<C-l>', '<C-w>l', nor)
+
 map('c', '%%', 'getcmdtype() == ":" ? expand("%:h")."/" : "%%"', nre)
 map('n', '+', '<c-a>', nor)
 map('n', '-', '<c-x>', nor)
