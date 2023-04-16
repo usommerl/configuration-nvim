@@ -19,6 +19,22 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup('plugins')
 
 -- Highlight yanked text
-vim.cmd [[ au TextYankPost * silent! lua vim.highlight.on_yank {timeout=250, on_visual=false} ]]
+vim.api.nvim_create_autocmd(
+  'TextYankPost',
+  {
+    pattern = { '*' },
+    command = [[lua vim.highlight.on_yank {timeout=250, on_visual=false}]]
+  }
+)
+
+-- Shortcut to close help windows
+vim.api.nvim_create_autocmd(
+  'FileType',
+  {
+    pattern = { 'help' },
+    command = [[nnoremap <buffer><silent>q :close<cr>]]
+  }
+)
+
 -- Set colorscheme
 read_if_exists_and_then(os.getenv('HOME') .. '/.vimrc_background', vim.cmd)
