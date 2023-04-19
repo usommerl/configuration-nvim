@@ -7,7 +7,7 @@ return {
         'FileType',
         {
           pattern = { 'fugitive', 'git' },
-          command = [[nnoremap <buffer><silent>q :close<cr>]]
+          command = [[nnoremap <buffer><silent>q :bd<cr>]]
         }
       )
     end

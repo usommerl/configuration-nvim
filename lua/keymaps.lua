@@ -21,7 +21,7 @@ map("v", "<A-k>", ":m '<-2<cr>gv=gv", nor)
 
 -- Git
 map('n', '<leader>gd', ':<C-u>Gdiffsplit<cr>', nrs)
-map('n', '<leader>gg', ':<C-u>Git<cr>', nrs)
+map('n', '<leader>gg', ':<C-u>Git<cr><C-w>o', nrs)
 map('n', '<leader>gl', ':<C-u>Telescope git_commits<cr>', nrs)
 map('n', '<leader>gL', ':<C-u>Telescope git_bcommits<cr>', nrs)
 map('n', '<leader>gps', ':<C-u>Git push<cr>', nrs)
