@@ -7,6 +7,7 @@ return {
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
       { 'nvim-telescope/telescope-frecency.nvim' },
       { 'jvgrootveld/telescope-zoxide' },
+      { 'debugloop/telescope-undo.nvim' },
       { 'tami5/sqlite.lua' }
     },
     cmd = 'Telescope',
@@ -37,6 +38,7 @@ return {
       telescope.load_extension('fzf')
       telescope.load_extension('zoxide')
       telescope.load_extension('frecency')
+      telescope.load_extension('undo')
 
       require('telescope._extensions.zoxide.config').setup({
         list_command = 'zoxide query -l --all'
