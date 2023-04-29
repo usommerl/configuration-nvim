@@ -21,8 +21,10 @@ return {
             view = "mini",
             filter = {
               any = {
-                { find = "; before #", event = "msg_show", kind = "" },
-                { find = "; after #",  event = "msg_show", kind = "" },
+                { find = "; before #",  event = "msg_show", kind = "" },
+                { find = "; after #",   event = "msg_show", kind = "" },
+                { find = "more lines",  event = "msg_show", kind = "" },
+                { find = "fewer lines", event = "msg_show", kind = "" },
               },
             },
           },
