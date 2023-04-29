@@ -14,12 +14,17 @@ return {
         },
         routes = {
           {
-            filter = {
-              event = "msg_show",
-              kind = "",
-              find = "written",
-            },
+            filter = { find = "written", event = "msg_show", kind = "" },
             opts = { skip = true },
+          },
+          {
+            view = "mini",
+            filter = {
+              any = {
+                { find = "; before #", event = "msg_show", kind = "" },
+                { find = "; after #",  event = "msg_show", kind = "" },
+              },
+            },
           },
         },
       })
