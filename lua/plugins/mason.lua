@@ -37,6 +37,14 @@ return {
           on_attach = on_attach,
         }
       end
+
+      lspconfig.yamlls.setup {
+        settings = {
+          yaml = {
+            keyOrdering = false,
+          }
+        },
+      }
     end
   }
 }
