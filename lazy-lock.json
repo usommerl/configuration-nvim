@@ -5,6 +5,7 @@
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
+  "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "edge": { "branch": "master", "commit": "cda4ae057cc6c0f6e15865772b64d2474f4dd5c2" },
   "github-nvim-theme": { "branch": "main", "commit": "77beac91194039e624dfeba07f1ea107d76d7c4a" },
   "gitsigns.nvim": { "branch": "main", "commit": "bb808fc7376ed7bac0fbe8f47b83d4bf01738167" },
@@ -45,5 +46,6 @@
   "vim-nix": { "branch": "master", "commit": "7d23e97d13c40fcc6d603b291fe9b6e5f92516ee" },
   "vim-one": { "branch": "master", "commit": "187f5c85b682c1933f8780d4d419c55d26a82e24" },
   "vim-rooter": { "branch": "master", "commit": "4f52ca556a0b9e257bf920658714470ea0320b7a" },
+  "vim-vsnip": { "branch": "master", "commit": "7753ba9c10429c29d25abfd11b4c60b76718c438" },
   "vim-win": { "branch": "master", "commit": "6638aade5ab5bb4779652e88116ef0d2f2b62128" }
 }
