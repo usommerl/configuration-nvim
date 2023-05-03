@@ -10,7 +10,7 @@ return {
       local cmd = vim.cmd
       cmd([[augroup fmt]])
       cmd([[autocmd!]])
-      cmd([[autocmd BufWritePre *.scala,*.lua,*.rs,*.json lua vim.lsp.buf.format()]])
+      cmd([[autocmd BufWritePre *.scala,*.lua,*.rs,*.json,*.yaml,*.yml lua vim.lsp.buf.format()]])
       cmd([[augroup end]])
 
       require("mason").setup()
@@ -36,6 +36,10 @@ return {
       local on_attach = function(client, bufnr)
         local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
         buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+        if client.name == "yamlls" then
+          client.server_capabilities.documentFormattingProvider = true
+        end
 
         if client.resolved_capabilities.document_highlight then
           vim.api.nvim_exec([[
@@ -64,6 +68,7 @@ return {
         if lsp == "yamlls" then
           config.settings = {
             yaml = {
+              format = { enable = true },
               keyOrdering = false,
             }
           }
