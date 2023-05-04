@@ -41,7 +41,7 @@ return {
           client.server_capabilities.documentFormattingProvider = true
         end
 
-        if client.resolved_capabilities.document_highlight then
+        if client.server_capabilities.document_highlight then
           vim.api.nvim_exec([[
             augroup lsp_document_highlight
             autocmd! * <buffer>
