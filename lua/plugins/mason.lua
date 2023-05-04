@@ -29,7 +29,8 @@ return {
         'angularls',
         'rnix',
         'yamlls',
-        'dartls'
+        'dartls',
+        'clangd'
       }
 
 
