@@ -5,6 +5,10 @@ local nre = { noremap = true, expr = true }
 
 vim.g.mapleader = ','
 
+-- better up/down
+map('n', 'j', 'gj', nor)
+map('n', 'k', 'gk', nor)
+
 -- Move to windows
 map('n', '<C-h>', '<C-w>h', nor)
 map('n', '<C-j>', '<C-w>j', nor)
