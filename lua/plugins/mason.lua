@@ -33,25 +33,12 @@ return {
         'clangd'
       }
 
-
       local on_attach = function(client, bufnr)
         local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
         buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
         if client.name == "yamlls" then
           client.server_capabilities.documentFormattingProvider = true
-        end
-
-        if client.server_capabilities.document_highlight then
-          vim.api.nvim_exec([[
-            augroup lsp_document_highlight
-            autocmd! * <buffer>
-            autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()
-            autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()
-            autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-            augroup END
-            ]],
-            false)
         end
       end
 
