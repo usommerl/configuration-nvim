@@ -7,5 +7,12 @@ return {
   { 'projekt0n/github-nvim-theme' },
   { 'EdenEast/nightfox.nvim' },
   { 'rebelot/kanagawa.nvim' },
-  { "catppuccin/nvim",            name = "catppuccin" }
+  { "catppuccin/nvim",            name = "catppuccin" },
+  { 'folke/tokyonight.nvim' },
+  {
+    'uloco/bluloco.nvim',
+    lazy = false,
+    priority = 1000,
+    dependencies = { 'rktjmp/lush.nvim' },
+  },
 }
