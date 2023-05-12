@@ -23,3 +23,7 @@ opt.title = true
 opt.undofile = true
 opt.updatetime = 300
 opt.writebackup = false
+
+vim.diagnostic.config {
+  float = { border = "rounded" },
+}
