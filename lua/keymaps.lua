@@ -34,7 +34,7 @@ map('n', '<leader>gb', ':<C-u>Telescope git_branches<cr>', nrs)
 map('n', '<leader>gB', ':<C-u>Git blame<cr>', nrs)
 
 map('c', '%%', 'getcmdtype() == ":" ? expand("%:h")."/" : "%%"', nre)
-map('n', '<leader><esc>', '<cmd>nohl<cr>', nrs)
+map('n', '<leader><esc>', '<cmd>nohl | Noice dismiss<cr>', nrs)
 map('n', '+', '<c-a>', nor)
 map('n', '-', '<c-x>', nor)
 map('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', nrs)
