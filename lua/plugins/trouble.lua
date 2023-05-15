@@ -6,6 +6,10 @@ return {
       { 'folke/lsp-colors.nvim' },
     },
     cmd = 'TroubleToggle',
-    config = function() require('trouble').setup() end
+    config = function()
+      require('trouble').setup {
+        auto_preview = false
+      }
+    end
   }
 }
