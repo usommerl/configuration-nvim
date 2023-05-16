@@ -8,7 +8,8 @@ return {
     cmd = 'TroubleToggle',
     config = function()
       require('trouble').setup {
-        auto_preview = false
+        auto_preview = false,
+        use_diagnostic_signs = true
       }
     end
   }

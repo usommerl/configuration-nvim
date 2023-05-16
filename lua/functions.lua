@@ -16,4 +16,3 @@ function diff_toggle()
     vim.cmd('windo diffthis')
   end
 end
-
