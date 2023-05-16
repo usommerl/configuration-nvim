@@ -6,7 +6,10 @@ return {
       require("nvim-treesitter.configs").setup(
         {
           ensure_installed = "all",
-          highlight = { enable = true },
+          highlight = {
+            enable = true,
+            disable = { 'gitcommit' }
+          },
           incremental_selection = { enable = true },
           indent = { enable = true }
         })
