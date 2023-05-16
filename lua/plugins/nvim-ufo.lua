@@ -43,7 +43,7 @@ return {
       require('ufo').setup({
         open_fold_hl_timeout = 0,
         fold_virt_text_handler = handler,
-        close_fold_kinds = { 'imports', 'comment' },
+        close_fold_kinds = { 'imports' },
       })
     end
   }
