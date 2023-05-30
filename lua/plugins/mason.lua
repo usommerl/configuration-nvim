@@ -20,17 +20,17 @@ return {
 
       local lspconfig = require('lspconfig')
       local servers = {
+        'angularls',
+        'clangd',
+        'dartls',
+        'jsonls',
+        'lua_ls',
+        'marksman',
+        'pyright',
+        'rnix',
         'rust_analyzer',
         'tsserver',
-        'pyright',
-        'marksman',
-        'lua_ls',
-        'jsonls',
-        'angularls',
-        'rnix',
         'yamlls',
-        'dartls',
-        'clangd'
       }
 
       local on_attach = function(client, bufnr)
