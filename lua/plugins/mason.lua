@@ -21,6 +21,7 @@ return {
       local lspconfig = require('lspconfig')
       local servers = {
         'angularls',
+        'bashls',
         'clangd',
         'dartls',
         'jsonls',
