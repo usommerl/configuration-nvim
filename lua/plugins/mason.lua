@@ -27,7 +27,7 @@ return {
         'jsonls',
         'lua_ls',
         'marksman',
-        'pyright',
+        'pylsp',
         'rnix',
         'rust_analyzer',
         'tsserver',
