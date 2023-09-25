@@ -66,6 +66,20 @@ return {
             }
           }
         end
+        if lsp == "pylsp" then
+          config.settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = {
+                  maxLineLength = 120,
+                },
+                flake8 = {
+                  maxLineLength = 120,
+                }
+              }
+            }
+          }
+        end
         lspconfig[lsp].setup(config)
       end
     end
