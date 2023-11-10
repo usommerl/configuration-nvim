@@ -10,7 +10,7 @@ return {
       local cmd = vim.cmd
       cmd([[augroup fmt]])
       cmd([[autocmd!]])
-      cmd([[autocmd BufWritePre *.scala,build.sbt,*.lua,*.rs,*.json,*.nix lua vim.lsp.buf.format()]])
+      cmd([[autocmd BufWritePre *.scala,build.sbt,*.lua,*.rs,*.json,*.nix,*.ts lua vim.lsp.buf.format()]])
       cmd([[augroup end]])
 
       require("mason").setup()
