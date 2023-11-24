@@ -57,6 +57,15 @@ return {
         }
       end
 
+      local function typescript_organize_imports()
+        local params = {
+          command = "_typescript.organizeImports",
+          arguments = { vim.api.nvim_buf_get_name(0) },
+          title = ""
+        }
+        vim.lsp.buf.execute_command(params)
+      end
+
       for _, lsp in pairs(servers) do
         local config = make_config()
         if lsp == "ltex" then
@@ -82,6 +91,14 @@ return {
                   maxLineLength = 120,
                 }
               }
+            }
+          }
+        end
+        if lsp == "tsserver" then
+          config.commands = {
+            OrganizeImports = {
+              typescript_organize_imports,
+              description = "Organize Imports"
             }
           }
         end
