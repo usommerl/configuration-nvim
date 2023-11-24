@@ -25,6 +25,7 @@ return {
         'clangd',
         'dartls',
         'jsonls',
+        'ltex',
         'lua_ls',
         'marksman',
         'pylsp',
@@ -58,6 +59,10 @@ return {
 
       for _, lsp in pairs(servers) do
         local config = make_config()
+        if lsp == "ltex" then
+          config["filetypes"] = { "markdown", "text" }
+          config["flags"] = { debounce_text_changes = 300 }
+        end
         if lsp == "yamlls" then
           config.settings = {
             yaml = {
