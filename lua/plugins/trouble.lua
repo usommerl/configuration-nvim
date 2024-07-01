@@ -5,11 +5,10 @@ return {
       { 'nvim-tree/nvim-web-devicons' },
       { 'folke/lsp-colors.nvim' },
     },
-    cmd = 'TroubleToggle',
+    cmd = 'Trouble',
     config = function()
       require('trouble').setup {
-        auto_preview = false,
-        use_diagnostic_signs = true
+        auto_preview = false
       }
     end
   }
