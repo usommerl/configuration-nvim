@@ -10,7 +10,7 @@ return {
       local cmd = vim.cmd
       cmd([[augroup fmt]])
       cmd([[autocmd!]])
-      cmd([[autocmd BufWritePre *.scala,build.sbt,*.lua,*.rs,*.json,*.nix,*.ts lua vim.lsp.buf.format()]])
+      cmd([[autocmd BufWritePre *.scala,build.sbt,*.lua,*.rs,*.json,*.jsonnet,*.nix,*.ts lua vim.lsp.buf.format()]])
       cmd([[augroup end]])
 
       require("mason").setup()
@@ -25,12 +25,13 @@ return {
         'clangd',
         'dartls',
         'jsonls',
+        'jsonnet_ls',
         'lua_ls',
         'marksman',
         'pylsp',
         'rnix',
         'rust_analyzer',
-        'tsserver',
+        'ts_ls',
         'yamlls',
       }
 
@@ -89,7 +90,7 @@ return {
             }
           }
         end
-        if lsp == "tsserver" then
+        if lsp == "ts_ls" then
           config.commands = {
             OrganizeImports = {
               typescript_organize_imports,
