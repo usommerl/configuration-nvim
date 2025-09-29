@@ -18,7 +18,6 @@ return {
         automatic_installation = true,
       })
 
-      local lspconfig = require('lspconfig')
       local servers = {
         'angularls',
         'bashls',
@@ -98,7 +97,7 @@ return {
             }
           }
         end
-        lspconfig[lsp].setup(config)
+        vim.lsp.config('*', config)
       end
     end
   }
