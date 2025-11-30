@@ -5,7 +5,34 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup(
         {
-          ensure_installed = "all",
+          ensure_installed = {
+            'angular',
+            'bash',
+            'css',
+            'csv',
+            'dart',
+            'java',
+            'json',
+            'jsonnet',
+            'lua',
+            'markdown',
+            'nix',
+            'python',
+            'ruby',
+            'rust',
+            'scala',
+            'scala',
+            'scss',
+            'toml',
+            'tsv',
+            'tsx',
+            'typescript',
+            'vim',
+            'vue',
+            'xml',
+            'yaml',
+            'zig',
+          },
           highlight = {
             enable = true,
             disable = { 'gitcommit' }
