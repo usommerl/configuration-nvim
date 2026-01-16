@@ -11,6 +11,7 @@ return {
       metals_config.settings = {
         showImplicitArguments = true,
         showInferredType = true,
+        serverVersion = "1.6.4",
       }
 
       local cmd = vim.cmd
