@@ -12,7 +12,25 @@ return {
         showImplicitArguments = true,
         showInferredType = true,
         serverVersion = "1.6.4",
+        inlayHints = {
+          -- I only enable inlay hints to display the results in worksheets. (See autocmd below)
+          -- Hence, I disable most of the features to reduce the noise.
+          byNameParameters = { enable = false },
+          hintsInPatternMatch = { enable = false },
+          implicitArguments = { enable = false },
+          implicitConversions = { enable = false },
+          inferredTypes = { enable = false },
+          typeParameters = { enable = false },
+        }
       }
+
+      vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead", "BufEnter" }, {
+        pattern = { "*.worksheet.sc" },
+        callback = function()
+          vim.lsp.inlay_hint.enable(true)
+        end,
+        group = nvim_metals_group,
+      })
 
       local cmd = vim.cmd
       cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float({focusable=false})]]
