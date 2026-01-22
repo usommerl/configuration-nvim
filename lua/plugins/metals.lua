@@ -9,6 +9,7 @@ return {
       metals_config = require('metals').bare_config()
       metals_config.init_options.statusBarProvider = 'on'
       metals_config.settings = {
+        defaultBspToBuildTool = true,
         showImplicitArguments = true,
         showInferredType = true,
         serverVersion = "1.6.4",
