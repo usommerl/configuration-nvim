@@ -12,6 +12,7 @@ return {
         defaultBspToBuildTool = true,
         showImplicitArguments = true,
         showInferredType = true,
+        startMcpServer = true,
         inlayHints = {
           -- I only enable inlay hints to display the results in worksheets. (See autocmd below)
           -- Hence, I disable most of the features to reduce the noise.
